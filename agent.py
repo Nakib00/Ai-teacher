@@ -7,25 +7,20 @@ from livekit.plugins import (
 )
 from livekit.plugins import google
 from prompts import AGENT_INSTRUCTION, SESSION_INSTRUCTION
-from tools import get_weather, search_web
-
-from university_info_tool import get_university_info
+from tools import get_educational_content 
 
 load_dotenv()
-
 
 class Assistant(Agent):
     def __init__(self) -> None:
         super().__init__(
             instructions=AGENT_INSTRUCTION,
             llm=google.beta.realtime.RealtimeModel(
-            voice="Aoede",
+            voice="Aoede", 
             temperature=0.8,
         ),
             tools=[
-                get_weather,
-                search_web,
-                get_university_info,
+                get_educational_content,
             ],
 
         )
