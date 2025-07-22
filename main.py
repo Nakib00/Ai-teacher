@@ -1,4 +1,5 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from database import create_user, get_user_by_email
 from livekit_service import generate_token
@@ -24,11 +25,24 @@ class LoginRequest(BaseModel):
 class TokenRequest(BaseModel):
     user_id: int
 
+@app.exception_handler(HTTPException)
+async def http_exception_handler(request: Request, exc: HTTPException):
+    return JSONResponse(
+        status_code=exc.status_code,
+        content={
+            "success": False,
+            "status": exc.status_code,
+            "message": exc.detail,
+            "data": None,
+            "errors": exc.detail if isinstance(exc.detail, dict) else {"detail": exc.detail}
+        },
+    )
+
 @app.post("/register")
 def register(data: RegisterRequest):
     existing_user = get_user_by_email(data.email)
     if existing_user:
-        raise HTTPException(status_code=400, detail="Email already registered")
+        raise HTTPException(status_code=400, detail={"email": ["The email has already been taken."]})
     
     user = create_user(data.name, data.email, data.phone, data.address, data.password)
     
