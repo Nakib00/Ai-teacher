@@ -26,11 +26,37 @@ class TokenRequest(BaseModel):
 
 @app.post("/register")
 def register(data: RegisterRequest):
-    # ... (Your existing registration code)
     existing_user = get_user_by_email(data.email)
     if existing_user:
         raise HTTPException(status_code=400, detail="Email already registered")
-    return create_user(data.name, data.email, data.phone, data.address, data.password)
+    
+    user = create_user(data.name, data.email, data.phone, data.address, data.password)
+    
+    if not user:
+        raise HTTPException(status_code=500, detail="Could not create user")
+
+    # Generate JWT token for your app's authentication
+    jwt_token = jwt.encode({"user_id": user[0], "email": user[2]}, JWT_SECRET, algorithm=JWT_ALGORITHM)
+
+    # Generate LiveKit data
+    livekit_data = generate_token(user[0])
+
+    return {
+        "success": True,
+        "status": 200,
+        "message": "Registration successful",
+        "data": {
+            "user": {
+                "user_id": user[0],
+                "name": user[1],
+                "email": user[2],
+                "token": jwt_token,
+                "livekit_token": livekit_data["token"],
+                "room": livekit_data["room"]
+            }
+        },
+        "errors": None
+    }
 
 
 @app.post("/login")
@@ -46,12 +72,20 @@ def login(data: LoginRequest):
     livekit_data = generate_token(user[0])
 
     return {
-        "user_id": user[0],
-        "name": user[1],
-        "email": user[2],
-        "token": jwt_token,
-        "livekit_token": livekit_data["token"], 
-        "room": livekit_data["room"]
+        "success": True,
+        "status": 200,
+        "message": "Login successful",
+        "data": {
+            "user": {
+                "user_id": user[0],
+                "name": user[1],
+                "email": user[2],
+                "token": jwt_token,
+                "livekit_token": livekit_data["token"],
+                "room": livekit_data["room"]
+            }
+        },
+        "errors": None
     }
 
 @app.post("/token")

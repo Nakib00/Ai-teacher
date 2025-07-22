@@ -33,7 +33,9 @@ def create_user(name, email, phone, address, password):
     c.execute("INSERT INTO users (name, email, phone, address, password) VALUES (?, ?, ?, ?, ?)",
               (name, email, phone, address, password))
     conn.commit()
-    return {"message": "User created"}
+    user_id = c.lastrowid
+    c.execute("SELECT * FROM users WHERE id = ?", (user_id,))
+    return c.fetchone()
 
 def get_user_by_email(email):
     c.execute("SELECT * FROM users WHERE email = ?", (email,))
