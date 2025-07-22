@@ -26,10 +26,12 @@ class TokenRequest(BaseModel):
 
 @app.post("/register")
 def register(data: RegisterRequest):
+    # ... (Your existing registration code)
     existing_user = get_user_by_email(data.email)
     if existing_user:
         raise HTTPException(status_code=400, detail="Email already registered")
     return create_user(data.name, data.email, data.phone, data.address, data.password)
+
 
 @app.post("/login")
 def login(data: LoginRequest):
@@ -37,19 +39,19 @@ def login(data: LoginRequest):
     if not user or user[5] != data.password:
         raise HTTPException(status_code=401, detail="Invalid email or password")
 
-    # Generate JWT token
+    # Generate JWT token for your app's authentication
     jwt_token = jwt.encode({"user_id": user[0], "email": user[2]}, JWT_SECRET, algorithm=JWT_ALGORITHM)
 
-    # Generate LiveKit token
-    livekit_token = generate_token(user[0])
+    # Generate LiveKit data
+    livekit_data = generate_token(user[0])
 
     return {
         "user_id": user[0],
         "name": user[1],
         "email": user[2],
         "token": jwt_token,
-        "livekit_token": livekit_token["token"],
-        "room": livekit_token["room"]
+        "livekit_token": livekit_data["token"], 
+        "room": livekit_data["room"]
     }
 
 @app.post("/token")
