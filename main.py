@@ -1,14 +1,19 @@
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
-from database import create_user, get_user_by_email
+from database import (
+    create_user, 
+    get_user_by_email, 
+    get_all_conversations, 
+    get_conversations_by_user_id
+)
 from livekit_service import generate_token
 from jose import jwt
 import os
 
 app = FastAPI()
 
-JWT_SECRET = os.getenv("JWT_SECRET", "your-super-secret-key")
+JWT_SECRET = os.getenv("JWT_SECRET")
 JWT_ALGORITHM = "HS256"
 
 class RegisterRequest(BaseModel):
@@ -105,3 +110,29 @@ def login(data: LoginRequest):
 @app.post("/token")
 def get_room_token(data: TokenRequest):
     return generate_token(data.user_id)
+
+@app.get("/conversations")
+def get_all_conversations_api():
+    conversations = get_all_conversations()
+    return {
+        "success": True,
+        "status": 200,
+        "message": "Conversations retrieved successfully",
+        "data": {
+            "conversations": conversations
+        },
+        "errors": None
+    }
+
+@app.get("/conversations/{user_id}")
+def get_conversations_by_user_id_api(user_id: int):
+    conversations = get_conversations_by_user_id(user_id)
+    return {
+        "success": True,
+        "status": 200,
+        "message": "User conversations retrieved successfully",
+        "data": {
+            "conversations": conversations
+        },
+        "errors": None
+    }

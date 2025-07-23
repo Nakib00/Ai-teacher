@@ -41,8 +41,16 @@ def get_user_by_email(email):
     c.execute("SELECT * FROM users WHERE email = ?", (email,))
     return c.fetchone()
 
-# CONVERSATION FUNCTION
+# CONVERSATION FUNCTIONS
 def save_conversation(user_id, message, sender):
     c.execute("INSERT INTO conversations (user_id, message, sender) VALUES (?, ?, ?)",
               (user_id, message, sender))
     conn.commit()
+
+def get_all_conversations():
+    c.execute("SELECT * FROM conversations")
+    return c.fetchall()
+
+def get_conversations_by_user_id(user_id):
+    c.execute("SELECT * FROM conversations WHERE user_id = ?", (user_id,))
+    return c.fetchall()
