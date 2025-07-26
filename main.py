@@ -4,6 +4,7 @@ from pydantic import BaseModel
 from database import (
     create_user, 
     get_user_by_email, 
+    get_user_by_id,
     get_all_conversations, 
     get_conversations_by_user_id
 )
@@ -109,7 +110,28 @@ def login(data: LoginRequest):
 
 @app.post("/token")
 def get_room_token(data: TokenRequest):
-    return generate_token(data.user_id)
+    user = get_user_by_id(data.user_id)
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    # Generate LiveKit data
+    livekit_data = generate_token(user[0])
+
+    return {
+        "success": True,
+        "status": 200,
+        "message": "LiveKit token generated successfully",
+        "data": {
+            "user": {
+                "user_id": user[0],
+                "name": user[1],
+                "email": user[2],
+                "livekit_token": livekit_data["token"],
+                "room": livekit_data["room"]
+            }
+        },
+        "errors": None
+    }
 
 @app.get("/conversations")
 def get_all_conversations_api():
