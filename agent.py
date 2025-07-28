@@ -5,7 +5,7 @@ from livekit.agents import AgentSession, Agent, RoomInputOptions
 from livekit.plugins import noise_cancellation, google
 from prompts import AGENT_INSTRUCTION, SESSION_INSTRUCTION
 from tools import get_educational_content
-from database import save_conversation 
+ 
 
 load_dotenv()
 
@@ -19,16 +19,6 @@ class Assistant(Agent):
             ),
             tools=[get_educational_content],
         )
-
-    async def on_text(self, text: str, participant, context) -> None:
-        user_id = participant.identity
-        save_conversation(user_id, text, "user")  # Save user msg
-        await super().on_text(text, participant, context)
-
-    async def on_response(self, response: str, context) -> None:
-        user_id = context.participant.identity
-        save_conversation(user_id, response, "ai")  # Save AI reply
-        await super().on_response(response, context)
 
 async def entrypoint(ctx: agents.JobContext):
     session = AgentSession()
