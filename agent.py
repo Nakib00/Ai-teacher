@@ -31,6 +31,8 @@ def load_persona_from_file(persona_id: str):
     logging.info(f"Successfully loaded persona: {persona_id}")
     return persona_module.AGENT_INSTRUCTION, persona_module.SESSION_INSTRUCTION
 
+
+
 class Assistant(Agent):
     def __init__(self, agent_instruction: str) -> None:
         super().__init__(
@@ -47,8 +49,15 @@ async def entrypoint(ctx: agents.JobContext):
     logging.info(f"Agent entering room: {room_name}")
 
     try:
-        # Extract the persona_id from the room name (e.g., user_3_teacher_ahmed -> ahmed)
-        persona_id = room_name.split('_teacher_')[1]
+        # Extract the user_id and persona_id from the room name
+        # new format: user_{user_id}_teacher_{persona_id}
+        parts = room_name.split('_teacher_')
+        user_info = parts[0]
+        persona_id = parts[1]
+        user_id = user_info.split('user_')[1]
+
+        logging.info(f"Successfully extracted user ID: {user_id} and persona ID: {persona_id}")
+
         agent_instruction, session_instruction = load_persona_from_file(persona_id)
     except (IndexError, FileNotFoundError) as e:
         logging.warning(f"Could not determine persona from room name '{room_name}'. Reason: {e}. Using default 'namira' persona.")
