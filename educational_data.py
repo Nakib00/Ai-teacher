@@ -1,7 +1,6 @@
 educational_data = {
     "class_3": {
-        "version": {
-            "english": {
+        "subjects": {
                 "basic science": {
                     "publish_date": "2024-01-01",
                     "Chapter 1": {
@@ -144,5 +143,4 @@ educational_data = {
                 }
             }
         }
-    }
 }
