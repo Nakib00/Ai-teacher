@@ -1,72 +1,148 @@
 educational_data = {
-    "class_1": {
-        "bangla": {
-            "topic": "Shoroborno (Vowels)",
-            "content": "In Bangla, we have 11 vowels, or Shoroborno! They are: অ (o), আ (a), ই (i), ঈ (ee), উ (u), ঊ (oo), ঋ (ri), এ (e), ঐ (oi), ও (o), ঔ (ou). Let's say them together!"
-        },
-        "english": {
-            "topic": "The Alphabet",
-            "content": "The English alphabet has 26 letters, starting with A, B, C, and ending with X, Y, Z. It's like a big family of letters that help us read and write!"
-        },
-        "math": {
-            "topic": "Counting up to 10",
-            "content": "Let's count! One, two, three, four, five, six, seven, eight, nine, ten! Can you count how many fingers you have?"
-        }
-    },
-    "class_2": {
-        "bangla": {
-            "topic": "Ritu (Seasons)",
-            "content": "Bangladesh has six beautiful seasons, or 'ritu'! They are Grishmo (Summer), Borsha (Rainy), Shorot (Autumn), Hemonto (Late Autumn), Sheet (Winter), and Boshonto (Spring)."
-        },
-        "english": {
-            "topic": "Vowels",
-            "content": "The superstars of the English alphabet are the vowels: A, E, I, O, U. They have special sounds! For example, 'A' is for Apple!"
-        },
-        "math": {
-            "topic": "Simple Addition",
-            "content": "Addition is just putting things together! If you have 2 mangoes and I give you 1 more, how many do you have? You have 2 + 1 = 3 mangoes! Yummy!"
-        }
-    },
     "class_3": {
-        "bangla": {
-            "topic": "National Symbols",
-            "content": "Our national flower is the Shapla (Water Lily), our national fruit is the Kathal (Jackfruit), and our national animal is the Royal Bengal Tiger! *Grrrr!*"
-        },
-        "english": {
-            "topic": "Making Sentences",
-            "content": "A sentence is like a complete thought. For example, 'I love to read books.' It has a who (I) and a what (love to read books). Let's make a sentence together!"
-        },
-        "math": {
-            "topic": "Subtraction",
-            "content": "Subtraction is taking things away. If you have 5 chocolates and you eat 2, you have 5 minus 2 = 3 chocolates left. Let's practice some more!"
-        }
-    },
-    "class_4": {
-        "bangla": {
-            "topic": "Dhaka City",
-            "content": "Dhaka is the capital of Bangladesh! It's a very busy city with many famous places like Lalbagh Fort and Ahsan Manzil."
-        },
-        "english": {
-            "topic": "Paragraphs",
-            "content": "A paragraph is a group of sentences about one main idea. It's like telling a small story. They help us organize our writing!"
-        },
-        "math": {
-            "topic": "Multiplication",
-            "content": "Multiplication is like doing addition many times. For example, 3 times 4 is the same as adding 3 four times: 3 + 3 + 3 + 3, which equals 12!"
-        }
-    },
-    "class_5": {
-        "bangla": {
-            "topic": "Our Liberation War",
-            "content": "In 1971, Bangladesh fought a great war for its freedom, called the Liberation War. It's because of our brave freedom fighters that we have our own country today."
-        },
-        "english": {
-            "topic": "Synonyms",
-            "content": "Synonyms are words that mean the same thing! For example, 'happy' and 'joyful' are synonyms. It's like having a secret code word!"
-        },
-        "math": {
-            "topic": "Division",
-            "content": "Division is sharing equally. If you have 10 candies to share between 2 friends, each friend gets 10 divided by 2, which is 5 candies!"
+        "version": {
+            "english": {
+                "basic science": {
+                    "publish_date": "2024-01-01",
+                    "Chapter 1": {
+                        "title": "Introduction to Plants",
+                        "description": "There are many living things in the world. Plants are one of them. Plants have different parts with specific functions and can be classified in various ways.",
+                        "topics": {
+                            "Different Parts of Plant": {
+                                "description": "Plants have different parts such as roots, stems, leaves, flowers, and fruits.",
+                                "examples": [
+                                    "Roots grow under the soil and absorb water and minerals.",
+                                    "Stems support the plant and transport nutrients.",
+                                    "Leaves produce food by photosynthesis.",
+                                    "Flowers help plants reproduce.",
+                                    "Fruits contain and protect the seeds."
+                                ],
+                                "questions_answer": [
+                                    "What are the main parts of a plant?",
+                                    "Which part of the plant absorbs water?",
+                                    "How do leaves help the plant?"
+                                ]
+                            },
+                            "Functions of Different Parts of Plants": {
+                                "description": "Each part of the plant has a special role to help the plant grow, survive, and reproduce.",
+                                "examples": [
+                                    "Roots hold the plant in the soil and absorb nutrients.",
+                                    "Stems carry water to different parts of the plant.",
+                                    "Leaves make food for the plant.",
+                                    "Flowers produce fruits and seeds.",
+                                    "Fruits protect the seeds."
+                                ],
+                                "questions_answer": [
+                                    "What is the function of a stem?",
+                                    "Which part of the plant produces seeds?",
+                                    "How do roots help the plant?"
+                                ]
+                            },
+                            "Classification of Plants Based on Stems": {
+                                "description": "Plants can be grouped based on the strength and type of stem.",
+                                "examples": [
+                                    "Trees have strong and woody stems.",
+                                    "Shrubs have short woody stems.",
+                                    "Herbs have soft and green stems.",
+                                    "Climbers need support to grow upright.",
+                                    "Creepers grow along the ground."
+                                ],
+                                "questions_answer": [
+                                    "Name three types of plants based on stems.",
+                                    "What is a climber?",
+                                    "What type of stem do herbs have?"
+                                ]
+                            },
+                            "Classification of Plants Based on Flowers": {
+                                "description": "Plants can also be classified based on whether they have flowers or not.",
+                                "examples": [
+                                    "Flowering plants: Rose, Mango",
+                                    "Non-flowering plants: Fern, Moss"
+                                ],
+                                "questions_answer": [
+                                    "What are flowering plants?",
+                                    "Give two examples of non-flowering plants."
+                                ]
+                            }
+                        }
+                    },
+                    "Chapter 2": {
+                        "title": "Introduction to Animals",
+                        "description": "Animals are also living things. They have different parts and functions. Animals can be grouped in several ways based on their body structures.",
+                        "topics": {
+                            "Different Parts of Animal Body": {
+                                "description": "Animals have different body parts like head, legs, eyes, tail, etc.",
+                                "examples": [
+                                    "Cats have four legs, a tail, and two ears.",
+                                    "Birds have beaks and wings.",
+                                    "Fish have fins and gills."
+                                ],
+                                "questions_answer": [
+                                    "What are some common body parts of animals?",
+                                    "Which animal has fins?",
+                                    "Name an animal with wings."
+                                ]
+                            },
+                            "Functions of Different Organs of an Animal Body": {
+                                "description": "Each organ or part of an animal's body has a function.",
+                                "examples": [
+                                    "Legs help animals walk or run.",
+                                    "Eyes help them see.",
+                                    "Ears help them hear.",
+                                    "Tails help in balance or communication."
+                                ],
+                                "questions_answer": [
+                                    "How do eyes help animals?",
+                                    "What is the function of the legs?",
+                                    "Why do animals have ears?"
+                                ]
+                            },
+                            "Classification of Animals": {
+                                "description": "Animals can be classified in different ways such as domestic, wild, aquatic, terrestrial, and aerial.",
+                                "examples": [
+                                    "Domestic: Cow, Dog",
+                                    "Wild: Lion, Tiger",
+                                    "Aquatic: Fish, Dolphin",
+                                    "Terrestrial: Elephant, Horse",
+                                    "Aerial: Eagle, Pigeon"
+                                ],
+                                "questions_answer": [
+                                    "What is a domestic animal?",
+                                    "Give two examples of wild animals.",
+                                    "What are aerial animals?"
+                                ]
+                            },
+                            "Classification of Vertebrates": {
+                                "description": "Vertebrates are animals with backbones and can be classified into five groups.",
+                                "examples": [
+                                    "Mammals: Human, Dog",
+                                    "Birds: Parrot, Crow",
+                                    "Reptiles: Snake, Lizard",
+                                    "Amphibians: Frog, Toad",
+                                    "Fishes: Shark, Goldfish"
+                                ],
+                                "questions_answer": [
+                                    "What are vertebrates?",
+                                    "Name five classes of vertebrates.",
+                                    "Which vertebrate lives both in water and land?"
+                                ]
+                            },
+                            "Observing Insects": {
+                                "description": "Insects are small animals with three body parts and six legs. They are the largest group of animals.",
+                                "examples": [
+                                    "Ants, bees, butterflies, and mosquitoes are insects.",
+                                    "Insects have head, thorax, abdomen, and antennae."
+                                ],
+                                "questions_answer": [
+                                    "What are the body parts of insects?",
+                                    "Name two flying insects.",
+                                    "How many legs do insects have?"
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
