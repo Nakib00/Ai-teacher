@@ -51,19 +51,21 @@ async def record_answer(
     topic: str,
     question: str,
     answer: str,
+    grading: int,
 ):
     """
-    Records the user's answer to a question in the progress tracker.
-    If the user cannot answer, the 'answer' should be 'CANNOT ANSWER'.
+    Records the user's answer to a question and its grading in the progress tracker.
+    If the user cannot answer, the 'answer' should be 'CANNOT ANSWER' and grading should be 0.
     """
     try:
-        logging.info(f"Recording answer for user {user_id} on topic '{topic}': '{answer}'")
+        logging.info(f"Recording answer for user {user_id} on topic '{topic}': '{answer}' with grade {grading}")
         save_Youtube(
             user_id=user_id,
             chapter=chapter,
             topic=topic,
             question=question,
-            answer=answer
+            answer=answer,
+            grading=grading
         )
         return "Answer has been successfully recorded."
     except Exception as e:

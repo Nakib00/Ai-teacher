@@ -12,14 +12,15 @@ def init_progress_file():
         with open(PROGRESS_FILE, 'w') as f:
             json.dump([], f)
 
-def save_Youtube(user_id: int, chapter: str, topic: str, question: str, answer: str):
-    """Saves a user's answer to a specific question in the JSON file."""
+def save_Youtube(user_id: int, chapter: str, topic: str, question: str, answer: str, grading: int):
+    """Saves a user's answer and its grading to a specific question in the JSON file."""
     new_record = {
         'user_id': user_id,
         'chapter': chapter,
         'topic': topic,
         'question': question,
         'answer': answer,
+        'grading': grading,
         'timestamp': datetime.now().isoformat()
     }
     try:
