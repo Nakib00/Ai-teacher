@@ -16,5 +16,59 @@
         "answer": "CANNOT ANSWER",
         "grading": 0,
         "timestamp": "2025-08-10T17:02:21.646419"
+    },
+    {
+        "user_id": 3,
+        "chapter": "Chapter 2",
+        "topic": "Different Parts of Animal Body",
+        "question": "What are some common body parts of animals?",
+        "answer": "Pa, Matha, Kaan",
+        "grading": 3,
+        "timestamp": "2025-08-10T18:56:24.453495"
+    },
+    {
+        "user_id": 3,
+        "chapter": "Chapter 2",
+        "topic": "Different Parts of Animal Body",
+        "question": "Which animal has fins?",
+        "answer": "Pakhir pakna ache",
+        "grading": 5,
+        "timestamp": "2025-08-10T18:56:38.001681"
+    },
+    {
+        "user_id": 3,
+        "chapter": "Chapter 2",
+        "topic": "Different Parts of Animal Body",
+        "question": "Name an animal with wings.",
+        "answer": "Doyel pakhi",
+        "grading": 5,
+        "timestamp": "2025-08-10T18:56:52.143353"
+    },
+    {
+        "user_id": 3,
+        "chapter": "Chapter 2",
+        "topic": "Functions of Different Organs of an Animal Body",
+        "question": "How do eyes help animals?",
+        "answer": "CANNOT ANSWER",
+        "grading": 0,
+        "timestamp": "2025-08-10T18:57:44.256978"
+    },
+    {
+        "user_id": 3,
+        "chapter": "Chapter 2",
+        "topic": "Functions of Different Organs of an Animal Body",
+        "question": "What is the function of the legs?",
+        "answer": "Pashura hate",
+        "grading": 5,
+        "timestamp": "2025-08-10T18:58:13.227901"
+    },
+    {
+        "user_id": 3,
+        "chapter": "Chapter 2",
+        "topic": "Functions of Different Organs of an Animal Body",
+        "question": "Why do animals have ears?",
+        "answer": "Kotha shonar jonno",
+        "grading": 5,
+        "timestamp": "2025-08-10T18:58:26.058098"
     }
 ]
