@@ -3,22 +3,6 @@
         "user_id": 3,
         "chapter": "Chapter 1",
         "topic": "Different Parts of Plant",
-        "question": "Which part of the plant absorbs water?",
-        "answer": "\u09b6\u09bf\u0995\u09b0",
-        "timestamp": "2025-08-03T03:40:03.877616"
-    },
-    {
-        "user_id": 3,
-        "chapter": "Chapter 1",
-        "topic": "Different Parts of Plant",
-        "question": "How do leaves help the plant?",
-        "answer": "\u09b8\u09be\u09b2\u09cb\u0995\u09b8\u0982\u09b6\u09cd\u09b2\u09c7\u09b7\u09a3 \u0995\u09b0\u09c7",
-        "timestamp": "2025-08-03T03:40:21.562945"
-    },
-    {
-        "user_id": 3,
-        "chapter": "Chapter 1",
-        "topic": "Different Parts of Plant",
         "question": "What are the main parts of a plant?",
         "answer": "\u09ae\u09c2\u09b2 \u0995\u09be\u09a3\u09cd\u09a1",
         "grading": 4,
