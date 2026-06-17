@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # --- File Paths ---
 USER_PROGRESS_FILE = "user_progress.json"
-EDUCATIONAL_DATA_FILE = "educational_data.py"
+EDUCATIONAL_DATA_FILE = "educational_data.json"
 
 # --- Helper Functions ---
 
@@ -28,30 +28,23 @@ def safe_json_load(file_path):
 
 def get_educational_data_dict():
     """
-    Reads and safely evaluates the educational_data.py file content.
+    Reads the educational_data.json file content.
     Returns the dictionary or None on error.
     """
     try:
         with open(EDUCATIONAL_DATA_FILE, "r", encoding="utf-8") as f:
-            content = f.read()
-            # Find the start of the dictionary and safely evaluate it
-            dict_start = content.find('{')
-            if dict_start == -1:
-                return None
-            return ast.literal_eval(content[dict_start:])
-    except (IOError, FileNotFoundError, SyntaxError):
+            return json.load(f)
+    except (IOError, FileNotFoundError, json.JSONDecodeError):
         return None
 
 def save_educational_data_dict(data):
     """
-    Saves the dictionary back to the educational_data.py file.
+    Saves the dictionary to the educational_data.json file.
     Returns True on success, False on error.
     """
     try:
-        # Format the data as a pretty-printed string
-        new_content = "educational_data = " + json.dumps(data, indent=4)
         with open(EDUCATIONAL_DATA_FILE, "w", encoding="utf-8") as f:
-            f.write(new_content)
+            json.dump(data, f, indent=4)
         return True
     except IOError:
         return False

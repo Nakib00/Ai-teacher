@@ -12,69 +12,63 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 load_dotenv()
 
-def load_persona_from_file(persona_id: str):
-    """Dynamically loads persona instructions from a file."""
-    # Ensure persona_id is lowercase to match filenames
-    persona_id = persona_id.lower()
-    persona_file = os.path.join("personas", f"{persona_id}.py")
+# --- Persona Instructions ---
+NAMIRA_AGENT_INSTRUCTION = """
+# Persona
+You are Namira, a friendly and cheerful AI-powered home tutor.
+Your personality is that of a kind, patient, and encouraging older sister who makes learning a joyful and happy experience for young children.
+You are always positive, gentle, and love to celebrate every small achievement.
 
-    logging.info(f"Attempting to load persona from: {persona_file}")
+# Conversational Flow
+You MUST follow this exact conversation flow step-by-step:
+1.  **Ask for Class:** Ask the user what class they are in. Wait for their response.
+2.  **Ask for Subject:** After they provide the class, ask them which subject they want to learn. Wait for their response.
+3.  **Ask for Chapter:** After they provide the subject, ask them which chapter they want to learn (e.g., 'Chapter 1', 'Chapter 2'). Wait for their response.
+4.  **Fetch Chapter Content:** Once you have the class, subject, and chapter name, you MUST use the `get_educational_content` tool one time to fetch the entire content for that chapter.
+5.  **Teach and Question Sequentially:**
+    - For EACH topic in the chapter:
+        a. Teach the topic's 'description' and 'examples' in a simple, friendly way.
+        b. Ask the questions from the 'questions_answer' list one by one.
+        c. Evaluate the answer (1-5) and use `record_answer` to save it.
+    - After finishing the chapter, ask if they want to learn another chapter.
 
-    if not os.path.exists(persona_file):
-        logging.error(f"Persona file not found: {persona_file}")
-        raise FileNotFoundError(f"Persona file not found: {persona_file}")
+# Language and Tone
+- **Default Language:** Friendly, conversational Bangla.
+- **Language Switching:** Switch to English if requested.
+- **Tone:** Sweet, warm, and happy. Use words like "Shabash!", "Khub bhalo korecho!".
+"""
 
-    spec = importlib.util.spec_from_file_location(persona_id, persona_file)
-    persona_module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(persona_module)
-    
-    logging.info(f"Successfully loaded persona: {persona_id}")
-    return persona_module.AGENT_INSTRUCTION, persona_module.SESSION_INSTRUCTION
+NAMIRA_SESSION_INSTRUCTION = """
+# Task
+Be a wonderful and happy teacher.
+Begin the conversation by saying: **"হ্যালো সোনামণি আমি তোমার নামিরা আপু! চলো আজকে মজার ছলে কিছু নতুন শিখি! তুমি কোন ক্লাসে পড়ো আর আজকে কি শিখতে চাও?"**
+"""
 
 class Assistant(Agent):
-    def __init__(self, agent_instruction: str, user_id: int) -> None:
+    def __init__(self, user_id: int) -> None:
         super().__init__(
-            instructions=agent_instruction,
+            instructions=NAMIRA_AGENT_INSTRUCTION,
             llm=google.beta.realtime.RealtimeModel(
-                voice="Aoede", # Note: You may want different voices for different personas
+                model="gemini-2.5-flash-native-audio-latest",
+                voice="Aoede",
                 temperature=0.8,
             ),
-            tools=[get_educational_content, record_answer], # Add the new tool
+            tools=[get_educational_content, record_answer],
         )
         self.user_id = user_id
 
 
 async def entrypoint(ctx: agents.JobContext):
-    room_name = ctx.room.name
-    logging.info(f"Agent entering room: {room_name}")
+    logging.info(f"Agent entering room: {ctx.room.name}")
     
-    user_id = 0
-    persona_id = 'namira'  # Default persona
-
-    try:
-        # Extract user_id and persona_id from the room name
-        # Format: user_{user_id}_teacher_{persona_id}
-        parts = room_name.split('_teacher_')
-        user_info = parts[0]
-        persona_id = parts[1]
-        user_id = int(user_info.split('user_')[1])
-        
-        logging.info(f"Initialized with User ID: {user_id} and Persona: {persona_id}")
-        agent_instruction, session_instruction_template = load_persona_from_file(persona_id)
-
-    except (IndexError, FileNotFoundError, ValueError) as e:
-        logging.warning(f"Could not determine persona or user from room name '{room_name}'. Reason: {e}. Using default 'namira' persona.")
-        agent_instruction, session_instruction_template = load_persona_from_file('namira')
-
-    # Add user_id to the session instructions so the LLM knows which user to track
-    session_instruction = f"The user's ID is {user_id}. You MUST use this ID when calling the `record_answer` tool.\n\n{session_instruction_template}"
-
-
+    # Simple defaults for the simplified version
+    user_id = 0 
+    
     session = AgentSession()
 
     await session.start(
         room=ctx.room,
-        agent=Assistant(agent_instruction, user_id=user_id), # Pass user_id to agent
+        agent=Assistant(user_id=user_id),
         room_input_options=RoomInputOptions(
             video_enabled=True,
             noise_cancellation=noise_cancellation.BVC(),
@@ -83,7 +77,7 @@ async def entrypoint(ctx: agents.JobContext):
 
     await ctx.connect()
 
-    await session.generate_reply(instructions=session_instruction)
+    await session.generate_reply(instructions=NAMIRA_SESSION_INSTRUCTION)
 
 if __name__ == "__main__":
     agents.cli.run_app(agents.WorkerOptions(entrypoint_fnc=entrypoint))

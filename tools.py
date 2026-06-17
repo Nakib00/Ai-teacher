@@ -1,7 +1,20 @@
 import logging
 from livekit.agents import function_tool, RunContext
 import json
-from educational_data import educational_data
+import os
+
+# --- Load Educational Data ---
+EDUCATIONAL_DATA_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "educational_data.json")
+
+def load_educational_data():
+    try:
+        with open(EDUCATIONAL_DATA_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        logging.error(f"Failed to load educational data: {e}")
+        return {}
+
+educational_data = load_educational_data()
 from user_progress import save_Youtube # Import from the new file
 
 @function_tool()
