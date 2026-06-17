@@ -1,1171 +1,452 @@
 {
-  "class_1": {
-    "subjects": {
-      "fun with technology": {
-        "publish_date": "2025-01-01",
-        "Chapter 1": {
-          "title": "আমার বন্ধু কম্পিউটার",
-          "description": "কম্পিউটার আমাদের দৈনন্দিন জীবনের একটি গুরুত্বপূর্ণ যন্ত্র। এটি হিসাব করতে পারে, গান বাজাতে পারে, ছবি আঁকতে পারে এবং আমাদের খেলতে সাহায্য করে।",
-          "topics": {
-            "কম্পিউটার কি?": {
-              "description": "কম্পিউটার একটি বিশেষ বৈদ্যুতিক যন্ত্র যে আমাদের দেওয়া নির্দেশ (instruction) খুব দ্রুত পালন করে। কম্পিউটার দুটি ভাগে বিভক্ত — Hardware মানে যা আমরা হাত দিয়ে ধরতে পারি, আর Software মানে ভেতরের বুদ্ধি বা program যা দিয়ে কম্পিউটার কাজ করে। কম্পিউটার কখনো ক্লান্ত হয় না এবং ভুল করে না — কিন্তু সে শুধু সেটাই করে যা আমরা বলি।",
-              "examples": [
-                "ডেস্কটপ কম্পিউটার — বাড়িতে বা অফিসে টেবিলের উপর রাখা হয়",
-                "ল্যাপটপ — ভাঁজ করা যায়, ব্যাগে নিয়ে যাওয়া যায়",
-                "ট্যাবলেট — স্পর্শ করে ব্যবহার করা যায়",
-                "স্মার্টফোন — পকেটে রাখা যায়, সবচেয়ে ছোট কম্পিউটার",
-                "ATM মেশিন — ব্যাংকে টাকা তোলার কম্পিউটার",
-                "ক্যাশ রেজিস্টার — দোকানে হিসাব রাখার কম্পিউটার"
-              ],
-              "questions_answer": [
-                "কম্পিউটার কি?",
-                "Hardware আর Software-এর মধ্যে পার্থক্য কি?",
-                "তোমার বাড়িতে কোন ধরনের কম্পিউটার আছে?",
-                "কম্পিউটার দিয়ে তুমি কি কি করতে পারো?",
-                "কম্পিউটার কি নিজে নিজে সিদ্ধান্ত নিতে পারে?",
-                "ATM মেশিন কি ধরনের কম্পিউটার?"
-              ]
-            },
-            "কম্পিউটারের অংশগুলো": {
-              "description": "কম্পিউটারের অনেকগুলো অংশ আছে যেগুলো একসাথে কাজ করে। Monitor হলো কম্পিউটারের চোখ — যেখানে আমরা সব কিছু দেখতে পাই। Keyboard হলো কম্পিউটারের মুখ — যেখানে আমরা লিখি এবং নির্দেশ দিই। Mouse হলো কম্পিউটারের হাত — যেটা দিয়ে আমরা স্ক্রিনে যেকোনো জায়গায় যেতে পারি। CPU (Central Processing Unit) হলো কম্পিউটারের মস্তিষ্ক — যেখানে সব কাজ আসলে হয়।",
-              "examples": [
-                "Monitor — টিভির মতো দেখতে, সব কিছু দেখা যায়",
-                "Keyboard — 26টি বর্ণমালা + সংখ্যা + বিশেষ বোতাম",
-                "Mouse — ক্লিক করলে কাজ হয়, scroll করলে নিচে-উপরে যাওয়া যায়",
-                "Speaker — গান ও শব্দ বের হয়",
-                "Printer — কম্পিউটারের লেখা কাগজে ছাপায়",
-                "Webcam — ছবি তোলে ও ভিডিও কল করা যায়"
-              ],
-              "questions_answer": [
-                "Monitor কোন কাজে লাগে?",
-                "Keyboard দিয়ে আমরা কি করি?",
-                "Mouse ছাড়া কম্পিউটার ব্যবহার করা কঠিন কেন?",
-                "CPU-কে কম্পিউটারের কি বলা হয়?",
-                "Printer কোন কাজে লাগে?",
-                "কম্পিউটারের কোন অংশটি তোমার কাছে সবচেয়ে মজার মনে হয় এবং কেন?"
-              ]
-            }
-          }
+  "robotics": {
+    "Chapter 1": {
+      "title": "Robotics বেসিক — রোবট কি ও কিভাবে কাজ করে",
+      "description": "রোবট হলো কম্পিউটার-নিয়ন্ত্রিত একটি যন্ত্র যে মানুষের নির্দেশ অনুযায়ী কাজ করে। রোবটের তিনটি মূল অংশ — Sensor (অনুভব করে), Controller/Brain (সিদ্ধান্ত নেয়), Actuator (কাজ করে)।",
+      "topics": {
+        "রোবট কি এবং রোবটের ইতিহাস": {
+          "description": "রোবট শব্দটি Czech ভাষার 'robota' থেকে এসেছে — অর্থ 'কঠোর শ্রম'। 1956 সালে Isaac Asimov রোবটের তিনটি Law দিয়েছেন: ১. রোবট মানুষকে আঘাত করবে না, ২. মানুষের আদেশ মানবে, ৩. নিজেকে রক্ষা করবে। আধুনিক রোবট ক্লান্ত হয় না, বিপজ্জনক কাজ করতে পারে এবং অনেক দ্রুত কাজ করে। আজ বিশ্বে ৩ মিলিয়নেরও বেশি industrial robot কাজ করছে।",
+          "examples": [
+            "Roomba — ঘর পরিষ্কার করার robot, নিজেই ঘুরে ময়লা সংগ্রহ করে",
+            "Sophia (Hanson Robotics) — মানুষের মতো দেখতে, কথা বলতে পারে",
+            "ASIMO (Honda) — দুই পায়ে হাঁটে, সিঁড়ি উঠতে পারে",
+            "Mars Rover Curiosity — মঙ্গলে পাথর পরীক্ষা করছে",
+            "DaVinci Surgical Robot — ডাক্তারকে সূক্ষ্ম অপারেশনে সাহায্য করে",
+            "Boston Dynamics Spot — চার পায়ে হাঁটে, যেকোনো terrain-এ যেতে পারে"
+          ],
+          "questions_answer": [
+            "রোবট শব্দটি কোন ভাষা থেকে এসেছে?",
+            "Isaac Asimov-এর তিনটি Robot Law কি কি?",
+            "রোবটের তিনটি মূল অংশ কি কি?",
+            "Roomba robot কোন কাজ করে?",
+            "মানুষের সাথে robot-এর মিল ও পার্থক্য কি কি?",
+            "রোবট কি কখনো মানুষের চেয়ে বেশি বুদ্ধিমান হতে পারবে?",
+            "তুমি কি ধরনের robot তৈরি করতে চাও এবং কেন?"
+          ]
         },
-        "Chapter 2": {
-          "title": "রোবট বন্ধু",
-          "description": "রোবট হলো এমন একটি যন্ত্র যাকে আমরা প্রোগ্রাম করে বিভিন্ন কাজ করাতে পারি। রোবট ক্লান্ত হয় না, ভয় পায় না এবং বিপজ্জনক কাজও করতে পারে।",
-          "topics": {
-            "রোবট কি?": {
-              "description": "রোবট হলো কম্পিউটার নিয়ন্ত্রিত একটি যন্ত্র যে মানুষের দেওয়া নির্দেশ অনুযায়ী কাজ করে। রোবটের তিনটি মূল অংশ আছে — Body (শরীর), Sensor (ইন্দ্রিয় — দেখতে ও অনুভব করতে পারে), আর Motor/Actuator (নড়াচড়া করতে পারে)। কিছু রোবট হুবহু মানুষের মতো দেখতে হয় (humanoid robot), আর কিছু রোবট সম্পূর্ণ আলাদা আকারের হয়। রোবট আমাদের জীবনকে সহজ করে তোলে।",
-              "examples": [
-                "Roomba — ঘর পরিষ্কার করার রোবট, নিজেই ঘুরে ঘুরে ময়লা পরিষ্কার করে",
-                "Sophia — মানুষের মতো দেখতে রোবট, কথা বলতে পারে",
-                "ASIMO (Honda) — দুই পায়ে হাঁটতে পারে",
-                "Mars Rover Curiosity — মঙ্গলগ্রহে পাথর পরীক্ষা করার রোবট",
-                "Surgical robot — অপারেশনে ডাক্তারকে সাহায্য করে",
-                "Amazon warehouse robot — গুদামঘরে মালপত্র বহন করে"
-              ],
-              "questions_answer": [
-                "রোবট কি?",
-                "রোবটের তিনটি মূল অংশের নাম বলো।",
-                "রোবট কি কখনো ক্লান্ত হয়?",
-                "Humanoid robot মানে কি?",
-                "Roomba রোবট কি কাজ করে?",
-                "তুমি কোন ধরনের রোবট তৈরি করতে চাও?"
-              ]
-            },
-            "রোবটকে কমান্ড দেওয়া": {
-              "description": "রোবটকে কাজ করাতে হলে তাকে সঠিকভাবে নির্দেশ (Command) দিতে হয়। প্রতিটি নির্দেশ পরিষ্কার ও নির্দিষ্ট হতে হবে। যদি বলো 'একটু সামনে যাও' — রোবট বুঝবে না কতটুকু। কিন্তু যদি বলো '50 সেন্টিমিটার সামনে যাও' — রোবট ঠিকঠাক কাজ করবে। রোবটের ভাষা হলো সংখ্যা ও নির্দিষ্ট নির্দেশ।",
-              "examples": [
-                "MOVE FORWARD 3 STEPS → রোবট ঠিক 3 কদম যাবে",
-                "TURN RIGHT 90 DEGREES → রোবট ডানে 90 ডিগ্রি ঘুরবে",
-                "STOP → রোবট থামবে",
-                "PICK UP OBJECT → রোবট জিনিস তুলবে",
-                "BLINK LED 5 TIMES → LED 5 বার জ্বলবে ও নিভবে",
-                "SAY 'Hello' → রোবট Hello বলবে"
-              ],
-              "questions_answer": [
-                "রোবটকে কাজ করাতে আমরা কি দিই?",
-                "কেন কমান্ড নির্দিষ্ট হওয়া দরকার?",
-                "রোবটকে যদি বলি 'একটু হাঁটো' — রোবট কি করবে?",
-                "TURN RIGHT 90 DEGREES কমান্ড দিলে রোবট কি করবে?",
-                "তুমি রোবটকে কি কমান্ড দিলে সে ঘুরে ঘরে ফিরবে?",
-                "মানুষের ভাষা আর রোবটের ভাষার পার্থক্য কি?"
-              ]
-            }
-          }
+        "Sensor — রোবটের ইন্দ্রিয়": {
+          "description": "Sensor হলো এমন একটি যন্ত্র যা পরিবেশের পরিবর্তন অনুভব করে এবং সেই তথ্য controller-এ পাঠায়। রোবটের Sensor না থাকলে সে অন্ধের মতো — পরিবেশ সম্পর্কে কিছুই জানতে পারবে না। Sense → Think → Act — এটাই robot-এর মূল কার্যপ্রক্রিয়া।",
+          "examples": [
+            "Ultrasonic Sensor (HC-SR04) — শব্দ তরঙ্গ দিয়ে সামনের বাধার দূরত্ব মাপে",
+            "IR Sensor — infrared আলো দিয়ে লাইন চেনে বা বাধা সনাক্ত করে",
+            "Temperature Sensor (DHT11) — তাপমাত্রা ও আর্দ্রতা মাপে",
+            "Camera (Vision Sensor) — ছবি ও ভিডিও ধারণ করে",
+            "Gyroscope — robot কতটুকু হেলে গেছে বোঝে (drone stability-তে দরকার)",
+            "Color Sensor — রঙ চেনে",
+            "Touch/Pressure Sensor — স্পর্শ ও চাপ অনুভব করে"
+          ],
+          "questions_answer": [
+            "Sensor কি এবং কি কাজ করে?",
+            "Ultrasonic Sensor কিভাবে দূরত্ব মাপে?",
+            "IR Sensor কোন কাজে লাগে?",
+            "Sense-Think-Act চক্র বোঝাও।",
+            "রোবটে Gyroscope কেন দরকার?",
+            "মানুষের ৫টি ইন্দ্রিয়ের সাথে robot sensor-এর তুলনা করো।",
+            "তোমার বাড়ি বা স্কুলে কোন ধরনের Sensor আছে বলে মনে হয়?"
+          ]
+        },
+        "Actuator ও Motor — রোবটের পেশী": {
+          "description": "Actuator হলো robot-এর সেই অংশ যা নড়াচড়া করে — রোবটের 'পেশী'। DC Motor চাকা ঘোরায়, Servo Motor নির্দিষ্ট কোণে ঘোরে (0-180°), Stepper Motor সুনির্দিষ্ট পদক্ষেপে ঘোরে। L298N Motor Driver দিয়ে Arduino থেকে DC Motor নিয়ন্ত্রণ করা হয়। PWM (Pulse Width Modulation) দিয়ে motor-এর speed নিয়ন্ত্রণ হয়।",
+          "examples": [
+            "DC Motor — robot car-এর চাকা ঘোরায়, সহজ ও সস্তা",
+            "Servo Motor — robot arm-এর joint, 0-180° পর্যন্ত ঘোরে",
+            "Stepper Motor — 3D printer, CNC machine-এ সঠিক position control",
+            "L298N Motor Driver — Arduino-র signal-কে motor-এর শক্তিতে রূপান্তর করে",
+            "Pneumatic Actuator — বাতাসের চাপ দিয়ে কাজ করে (industrial robot)",
+            "analogWrite(ENA, 200) → motor 78% speed-এ চলবে"
+          ],
+          "questions_answer": [
+            "Actuator কি?",
+            "DC Motor ও Servo Motor-এর পার্থক্য কি?",
+            "Motor Driver কেন দরকার?",
+            "PWM মানে কি?",
+            "3D Printer-এ কোন ধরনের Motor ব্যবহার হয়?",
+            "Robot arm-এ কোন Motor সবচেয়ে উপযুক্ত এবং কেন?",
+            "analogWrite(ENA, 128) দিলে motor কত % speed-এ চলবে?"
+          ]
+        }
+      }
+    },
+    "Chapter 2": {
+      "title": "Robot Types ও Real-World Applications",
+      "description": "বিভিন্ন ধরনের রোবট বিভিন্ন কাজে ব্যবহার হয়। Robot-এর ধরন নির্ধারণ করে তার design, sensor ও programming।",
+      "topics": {
+        "Line Follower Robot": {
+          "description": "Line Follower Robot কালো লাইনের উপর দিয়ে চলে। IR Sensor কালো (আলো শোষণ করে) ও সাদা (আলো প্রতিফলিত করে) পার্থক্য করে robot-কে সঠিক দিকে রাখে। Amazon ও hospital-এ এই ধরনের robot মালামাল বহন করে। PID Control ব্যবহার করলে robot আরো smooth ও accurate ভাবে চলে।",
+          "examples": [
+            "Left IR=0 (black), Right IR=0 (black) → সামনে যাও",
+            "Left IR=0 (black), Right IR=1 (white) → বাঁয়ে ঘোরো",
+            "Left IR=1 (white), Right IR=0 (black) → ডানে ঘোরো",
+            "Both IR=1 (white) → থামো বা পথ খোঁজো",
+            "Amazon warehouse: floor-এ লাইন ধরে packages বহন করে",
+            "Hospital: ওষুধ delivery robot line following ব্যবহার করে"
+          ],
+          "questions_answer": [
+            "Line Follower Robot কিভাবে লাইন চেনে?",
+            "Left=0, Right=1 হলে robot কোন দিকে যাবে?",
+            "কালো রঙে IR আলোর কি হয়?",
+            "Line Follower robot বাস্তবে কোথায় ব্যবহার হয়?",
+            "PID Control কেন Line Follower-কে ভালো করে?",
+            "দুটো IR sensor-এর বদলে তিনটি sensor থাকলে কি সুবিধা হবে?",
+            "তুমি Line Follower robot তৈরি করতে কি কি উপকরণ লাগবে?"
+          ]
+        },
+        "Obstacle Avoidance Robot": {
+          "description": "Obstacle Avoidance Robot সামনে বাধা সনাক্ত করে নিজেই সরে যায়। Ultrasonic sensor দিয়ে দূরত্ব মাপে এবং নির্দিষ্ট দূরত্বে বাধা থাকলে দিক পরিবর্তন করে। Self-driving car-এর মূল নীতি এটিই।",
+          "examples": [
+            "If distance < 20cm → stop ও alternate path খোঁজো",
+            "Servo motor দিয়ে sensor ঘুরিয়ে বাম/ডান স্ক্যান করো",
+            "Tesla Autopilot: Ultrasonic + Radar + Camera দিয়ে obstacle avoid করে",
+            "Vacuum Robot Roomba: দেয়াল ও furniture এড়িয়ে চলে",
+            "distance = (echo_time × 0.034) / 2 → centimeter-এ দূরত্ব"
+          ],
+          "questions_answer": [
+            "Obstacle Avoidance Robot কিভাবে কাজ করে?",
+            "Ultrasonic sensor দূরত্ব কিভাবে হিসাব করে?",
+            "দূরত্বের formula কি?",
+            "Robot বাধা দেখলে কি steps নেয়?",
+            "Tesla Autopilot-এ কোন কোন sensor ব্যবহার হয়?",
+            "Obstacle Avoidance ও Line Following-এর মধ্যে কোনটা বেশি কঠিন এবং কেন?",
+            "তুমি কিভাবে robot-কে সবচেয়ে ভালো path choose করাবে?"
+          ]
+        }
+      }
+    },
+    "Chapter 3": {
+      "title": "Arduino দিয়ে হাতে-কলমে রোবোটিক্স",
+      "description": "Arduino হলো রোবোটিক্স শেখার সবচেয়ে জনপ্রিয় platform। এখানে C/C++ ভাষায় কোড লিখে hardware নিয়ন্ত্রণ করা শেখা যায়।",
+      "topics": {
+        "Arduino পরিচিতি ও LED Blink": {
+          "description": "Arduino একটি open-source microcontroller board। Arduino IDE-তে C/C++ ভাষায় কোড লেখা হয়। void setup() একবার চলে (initialization), void loop() বারবার চলে (main program)। LED Blink হলো সবচেয়ে প্রথম Arduino project।",
+          "examples": [
+            "void setup() { pinMode(13, OUTPUT); }",
+            "void loop() { digitalWrite(13, HIGH); delay(1000); digitalWrite(13, LOW); delay(1000); }",
+            "digitalWrite(13, HIGH) → 5V পাঠায় → LED জ্বলে",
+            "delay(500) → 500 millisecond = 0.5 second অপেক্ষা",
+            "Arduino Uno: 14টি digital pin, 6টি analog pin",
+            "Serial.println('Hello') → PC-তে message পাঠায়"
+          ],
+          "questions_answer": [
+            "Arduino কি?",
+            "void setup() ও void loop()-এর পার্থক্য কি?",
+            "digitalWrite(13, HIGH) কি করে?",
+            "delay(1000) মানে কত সেকেন্ড?",
+            "LED Circuit-এ Resistor কেন লাগে?",
+            "Arduino Uno-তে কতটি digital pin আছে?",
+            "Serial Monitor কি কাজে লাগে?"
+          ]
+        },
+        "Sensor পড়া ও Motor নিয়ন্ত্রণ": {
+          "description": "Arduino দিয়ে sensor data পড়া ও সেই data অনুযায়ী motor বা LED নিয়ন্ত্রণ করা। analogRead() দিয়ে analog sensor পড়া হয়। pulseIn() দিয়ে Ultrasonic sensor-এর echo সময় মাপা হয়।",
+          "examples": [
+            "int val = analogRead(A0);  // 0-1023 মানে",
+            "digitalWrite(TRIG, HIGH); delayMicroseconds(10); digitalWrite(TRIG, LOW);\nlong duration = pulseIn(ECHO, HIGH);\nfloat dist = duration * 0.034 / 2;",
+            "// Motor forward:\ndigitalWrite(IN1, HIGH); digitalWrite(IN2, LOW); analogWrite(ENA, 200);",
+            "// Motor stop:\ndigitalWrite(IN1, LOW); digitalWrite(IN2, LOW);",
+            "if (dist < 15) { stop(); turnLeft(); } else { forward(); }"
+          ],
+          "questions_answer": [
+            "analogRead() কোন ধরনের sensor-এ ব্যবহার হয়?",
+            "Ultrasonic sensor-এ TRIG ও ECHO pin-এর কাজ কি?",
+            "Distance formula কি?",
+            "Motor forward করতে IN1 ও IN2-এ কি দিতে হবে?",
+            "analogWrite(ENA, 255) মানে motor কত % speed-এ চলবে?",
+            "dist < 15 হলে robot কি করবে?",
+            "Obstacle avoidance robot-এর সম্পূর্ণ logic বর্ণনা করো।"
+          ]
         }
       }
     }
   },
-  "class_2": {
-    "subjects": {
-      "fun with technology": {
-        "publish_date": "2025-01-01",
-        "Chapter 1": {
-          "title": "ছবি দিয়ে কোডিং — Algorithm ও Sequence",
-          "description": "কোডিং মানে কম্পিউটারকে ধাপে ধাপে নির্দেশ দেওয়া। আমরা কোড দিয়ে রোবট ও কম্পিউটারকে যেকোনো কাজ করাতে পারি।",
-          "topics": {
-            "Algorithm কি?": {
-              "description": "Algorithm হলো কোনো সমস্যা সমাধানের জন্য ধাপে ধাপে পরিকল্পনা। প্রতিদিনের জীবনেও আমরা Algorithm ব্যবহার করি — জানি না কিন্তু করি! সকালে উঠে দাঁত মাজা, স্কুলে আসার রাস্তা, রান্নার রেসিপি — এগুলো সবই Algorithm। কম্পিউটার ও রোবট সবসময় Algorithm অনুসরণ করে কাজ করে — তারা নিজে নিজে সিদ্ধান্ত নেয় না।",
-              "examples": [
-                "সকালে উঠার Algorithm: ঘুম থেকে ওঠো → দাঁত মাজো → মুখ ধোও → নাস্তা খাও → স্কুলের পোশাক পরো",
-                "চা বানানোর Algorithm: পানি গরম করো → চা পাতা দাও → চিনি মেশাও → কাপে ঢালো",
-                "গেম খেলার Algorithm: গেম চালু করো → character বেছে নাও → খেলা শুরু করো → জিতলে পরবর্তী level যাও",
-                "গণিতের সমস্যা সমাধানের Algorithm: সমস্যা পড়ো → বুঝো → সংখ্যা বসাও → হিসাব করো → উত্তর লেখো",
-                "Google Maps-এর Algorithm: গন্তব্য ঠিক করো → সব রাস্তা বিশ্লেষণ করো → সবচেয়ে ছোট রাস্তা দেখাও",
-                "Robot arm-এর Algorithm: জিনিস শনাক্ত করো → হাত নিয়ে যাও → আঁকড়ে ধরো → তুলে নাও"
-              ],
-              "questions_answer": [
-                "Algorithm কি?",
-                "তোমার সকালে উঠার Algorithm বলো — কোন কাজগুলো কোন ক্রমে করো?",
-                "Algorithm কি যেকোনো ক্রমে করলে চলে? কেন?",
-                "রান্নার রেসিপিকে Algorithm বলা যায় কেন?",
-                "কম্পিউটার কি Algorithm ছাড়া কাজ করতে পারে?",
-                "তুমি যদি একটি robot-কে তোমার ক্লাসরুমে পানির বোতল আনতে বলো — সেই Algorithm কি হবে?"
-              ]
-            },
-            "Sequence মানে কি?": {
-              "description": "Sequence মানে হলো কাজগুলো সঠিক ক্রমে (order) সম্পন্ন করা। ক্রম ভুল হলে পুরো কাজ ভুল হয়ে যায়। যেমন — জুতা পড়ার আগে মোজা পড়তে হয়। মোজা আগে না পড়লে জুতা খুলে আবার পড়তে হবে। কম্পিউটার ও রোবট Sequence-এর ব্যাপারে খুব কঠোর — একটু ক্রম ভুল হলেই সব ভুল হয়।",
-              "examples": [
-                "✅ সঠিক: মোজা পরো → জুতা পরো",
-                "❌ ভুল: জুতা পরো → মোজা পরো (এটা সম্ভব না!)",
-                "✅ সঠিক: পানি গরম করো → ডিম ছাড়ো → সেদ্ধ হতে দাও",
-                "❌ ভুল: ডিম ছাড়ো → তারপর পানি গরম করো (ঠান্ডা পানিতে ডিম দিলে সঠিক হবে না)",
-                "Robot: চালু করো → sensor calibrate করো → সামনে যাও (এই sequence সঠিক)",
-                "App: open করো → login করো → কাজ করো (এই sequence সবসময় একই)"
-              ],
-              "questions_answer": [
-                "Sequence মানে কি?",
-                "Sequence ভুল হলে কি হয় — একটি উদাহরণ দাও।",
-                "জুতা-মোজার উদাহরণে সঠিক Sequence কোনটি?",
-                "রোবটের জন্য তিন ধাপের একটি Sequence তৈরি করো।",
-                "কম্পিউটার প্রোগ্রামে Sequence কেন গুরুত্বপূর্ণ?",
-                "ভাত রান্নার Sequence বলো — কোন কাজটা আগে করতে হবে?"
-              ]
-            }
-          }
+  "programming": {
+    "Chapter 1": {
+      "title": "Scratch — ছবি দিয়ে প্রোগ্রামিং",
+      "description": "Scratch হলো MIT-এর তৈরি বিনামূল্যের প্রোগ্রামিং প্ল্যাটফর্ম যেখানে রঙিন block দিয়ে কোড লেখা যায়।",
+      "topics": {
+        "Scratch বেসিক ও Sprite নিয়ন্ত্রণ": {
+          "description": "Scratch-এ Sprite হলো main character। Stage হলো যেখানে সব কিছু ঘটে। Block palette থেকে block drag করে script area-তে রাখলে program তৈরি হয়। Motion, Looks, Sound, Events, Control, Sensing — ছয়টি প্রধান block category।",
+          "examples": [
+            "When green flag clicked → Move 10 steps → Sprite ডানে যাবে",
+            "When green flag clicked → Say 'Hello ZAN TECH!' for 2 secs",
+            "Forever → Move 5 steps → If on edge bounce → সারাক্ষণ ছুটাছুটি",
+            "Repeat 4 → Move 100 steps → Turn 90 degrees → বর্গক্ষেত্র তৈরি",
+            "If touching color red → Stop all → বাধায় গেলে থামবে",
+            "When space pressed → Change y by 50 → Jump করবে"
+          ],
+          "questions_answer": [
+            "Scratch কে তৈরি করেছে?",
+            "Sprite মানে কি?",
+            "Green flag ও Red stop button কি করে?",
+            "Scratch-এ program শুরু করতে কোন block লাগে?",
+            "Forever block-এর ভেতরে 'Move 10 steps' দিলে কি হবে?",
+            "Repeat 4 → Move 100 → Turn 90 দিলে কোন আকৃতি তৈরি হবে?",
+            "Scratch দিয়ে তুমি কি ধরনের game বানাতে চাও?"
+          ]
         },
-        "Chapter 2": {
-          "title": "Scratch দিয়ে খেলি",
-          "description": "Scratch হলো বিশেষ একটি প্রোগ্রামিং টুল যেখানে রঙিন ব্লক দিয়ে কোড লেখা যায়। কোনো কঠিন ভাষা শিখতে হয় না।",
-          "topics": {
-            "Scratch পরিচিতি": {
-              "description": "Scratch হলো MIT (Massachusetts Institute of Technology) বিশ্ববিদ্যালয়ের তৈরি একটি বিনামূল্যের প্রোগ্রামিং প্ল্যাটফর্ম। এখানে কোড টাইপ করতে হয় না — রঙিন ব্লক ধরে টেনে সাজালেই প্রোগ্রাম হয়। Scratch-এ একটি বিড়াল character আছে যাকে 'Sprite' বলে — আমরা এই Sprite-কে বিভিন্ন কমান্ড দিয়ে নাচাতে, হাঁটাতে, কথা বলাতে পারি। বিশ্বের 150টিরও বেশি দেশে Scratch ব্যবহার হয়।",
-              "examples": [
-                "'Move 10 steps' ব্লক → Sprite ডানে 10 পদক্ষেপ যাবে",
-                "'Say Hello for 2 seconds' ব্লক → Sprite 2 সেকেন্ড Hello বলবে",
-                "'Play sound meow' ব্লক → বিড়ালের মিউ শব্দ বাজবে",
-                "'Turn 15 degrees' ব্লক → Sprite একটু ঘুরবে",
-                "'Change color effect by 25' ব্লক → Sprite-এর রঙ বদলাবে",
-                "'When green flag clicked' ব্লক → সবুজ পতাকা চাপলে program শুরু হবে"
-              ],
-              "questions_answer": [
-                "Scratch কে তৈরি করেছে?",
-                "Scratch-এর মূল character-এর নাম কি?",
-                "Sprite মানে কি?",
-                "Scratch-এ কোড লিখতে কি ব্যবহার করি?",
-                "'Move 10 steps' ব্লক দিলে Sprite কি করবে?",
-                "Scratch ব্যবহার করতে কি টাকা লাগে?",
-                "Scratch দিয়ে তুমি কি ধরনের game বানাতে চাও?"
-              ]
-            }
-          }
+        "Algorithm, Sequence ও Loop": {
+          "description": "Algorithm হলো সমস্যা সমাধানের ধাপে ধাপে পরিকল্পনা। Sequence মানে সঠিক ক্রমে কাজ করা। Loop মানে একই কাজ বারবার করা। এই তিনটি ধারণা প্রোগ্রামিংয়ের ভিত্তি এবং বাস্তব জীবনেও সর্বত্র আছে।",
+          "examples": [
+            "Algorithm: সকালের routine → উঠো → দাঁত মাজো → নাস্তা খাও → স্কুলে যাও",
+            "Sequence ভুল: জুতা পরো → মোজা পরো (অসম্ভব!)",
+            "Sequence ঠিক: মোজা পরো → জুতা পরো",
+            "Loop: Repeat 10 → Say 'ZAN TECH' → Sprite 10 বার বলবে",
+            "Forever Loop: ঘড়ির কাঁটা চিরকাল ঘোরে",
+            "Nested Loop: Repeat 4 → { Repeat 3 → Move 10 → Turn 30 } → ফুলের মতো আকৃতি"
+          ],
+          "questions_answer": [
+            "Algorithm কি?",
+            "Sequence ভুল হলে কি হয়?",
+            "Loop কেন প্রোগ্রামিংয়ে দরকার?",
+            "Forever ও Repeat-এর পার্থক্য কি?",
+            "তোমার সকালের Algorithm বলো।",
+            "Repeat 4 → Move 100 → Turn 90 — এটা কোন geometric আকৃতি তৈরি করে?",
+            "Loop ছাড়া 100 বার Hello বলাতে কতগুলো block লাগবে?"
+          ]
+        }
+      }
+    },
+    "Chapter 2": {
+      "title": "Python — AI-এর ভাষা",
+      "description": "Python হলো বিশ্বের সবচেয়ে জনপ্রিয় প্রোগ্রামিং ভাষাগুলোর একটি। সহজ ও শক্তিশালী — AI থেকে web সব কাজে ব্যবহার হয়।",
+      "topics": {
+        "Python বেসিক — Variable, Data Type, Input/Output": {
+          "description": "Python-এ variable তৈরিতে কোনো keyword লাগে না। চার ধরনের মূল data type: String (লেখা), Integer (পূর্ণসংখ্যা), Float (দশমিক), Boolean (True/False)। print() দিয়ে output দেখানো হয়, input() দিয়ে user থেকে তথ্য নেওয়া হয়। Python সহজ ইংরেজির মতো — Google, NASA, Instagram সবাই ব্যবহার করে।",
+          "examples": [
+            "name = 'Namira'  # String\nage = 15          # Integer\nheight = 5.4      # Float\nis_student = True # Boolean",
+            "print('Hello, ' + name)  # Hello, Namira",
+            "print(f'আমার বয়স {age} বছর')  # f-string",
+            "user_name = input('তোমার নাম লেখো: ')",
+            "print(type(age))  # <class 'int'>",
+            "robot_speed = 100\nrobot_speed += 50  # এখন 150"
+          ],
+          "questions_answer": [
+            "Python কে তৈরি করেছেন এবং কোথায় ব্যবহার হয়?",
+            "String, Integer, Float, Boolean-এর পার্থক্য কি?",
+            "print() ও input() কি কাজ করে?",
+            "f-string কি এবং কেন ব্যবহার হয়?",
+            "type() function কি দেখায়?",
+            "robot_speed = 100 এর পর robot_speed += 50 করলে মান কত হবে?",
+            "Python জেনে ভবিষ্যতে কি ধরনের কাজ পাওয়া যাবে?"
+          ]
+        },
+        "Python — Condition, Loop, Function": {
+          "description": "if-elif-else দিয়ে সিদ্ধান্ত নেওয়া হয়। for ও while loop দিয়ে বারবার কাজ করা হয়। def দিয়ে function তৈরি করা হয় — যা বারবার ব্যবহার করা যায়। Indentation (4 space) Python-এ বাধ্যতামূলক।",
+          "examples": [
+            "score = 75\nif score >= 80:\n    print('A')\nelif score >= 60:\n    print('B')\nelse:\n    print('F')",
+            "for i in range(1, 6):\n    print(i * 3)  # 3-এর নামতা",
+            "count = 0\nwhile count < 5:\n    print('ZAN TECH')\n    count += 1",
+            "def greet(name):\n    return f'Hello, {name}! Welcome to ZAN TECH!'\nprint(greet('Rahim'))",
+            "def check_obstacle(dist):\n    if dist < 20: return 'STOP'\n    else: return 'GO'"
+          ],
+          "questions_answer": [
+            "elif মানে কি?",
+            "score = 65 হলে উপরের code-এ কি print হবে?",
+            "range(1, 6) কোন সংখ্যাগুলো দেয়?",
+            "while loop কখন থামে?",
+            "def কি কাজ করে?",
+            "greet('Karim') call করলে কি return হবে?",
+            "Indentation Python-এ কেন গুরুত্বপূর্ণ?"
+          ]
+        },
+        "Python OOP — Class ও Object": {
+          "description": "OOP-এ Class হলো blueprint, Object হলো সেই blueprint থেকে তৈরি জিনিস। __init__ হলো constructor। self মানে object নিজেকে বোঝায়। Inheritance-এ child class, parent class-এর সব feature পায়।",
+          "examples": [
+            "class Robot:\n    def __init__(self, name, speed):\n        self.name = name\n        self.speed = speed\n    def move(self, direction):\n        print(f'{self.name} moving {direction} at {self.speed} m/s')\n\nr1 = Robot('Namira', 5)\nr1.move('forward')",
+            "class FlyingRobot(Robot):  # Inheritance\n    def fly(self, altitude):\n        print(f'{self.name} flying at {altitude}m')\n\nfr = FlyingRobot('SkyBot', 10)\nfr.move('right')  # parent method কাজ করবে\nfr.fly(100)"
+          ],
+          "questions_answer": [
+            "Class ও Object-এর পার্থক্য কি?",
+            "__init__ কি এবং কখন চলে?",
+            "self keyword কেন লাগে?",
+            "Inheritance কি?",
+            "r1.move('backward') call করলে কি output হবে?",
+            "FlyingRobot কি Robot-এর move() method ব্যবহার করতে পারবে?",
+            "OOP ব্যবহারের মূল সুবিধা কি?"
+          ]
+        }
+      }
+    },
+    "Chapter 3": {
+      "title": "Data Structures ও Algorithms",
+      "description": "সঠিক Data Structure ও Algorithm ব্যবহার করলে program দ্রুত ও দক্ষ হয়।",
+      "topics": {
+        "List, Dictionary, Stack, Queue": {
+          "description": "List হলো ক্রমানুসারে সাজানো elements-এর সংগ্রহ। Dictionary হলো key-value pair। Stack হলো LIFO (Last In First Out), Queue হলো FIFO (First In First Out)। এই চারটি Data Structure সব বড় software-এ ব্যবহার হয়।",
+          "examples": [
+            "robots = ['Namira', 'ASIMO', 'Sophia']\nprint(robots[0])  # Namira\nrobots.append('Wall-E')",
+            "robot_info = {'name': 'Namira', 'speed': 5}\nprint(robot_info['name'])  # Namira",
+            "stack = []\nstack.append('page1')  # push\nstack.pop()            # pop LIFO",
+            "import collections\nqueue = collections.deque()\nqueue.append('job1')\nqueue.popleft()  # FIFO",
+            "Browser back = Stack, Print queue = Queue, Undo = Stack"
+          ],
+          "questions_answer": [
+            "List ও Dictionary-র পার্থক্য কি?",
+            "Stack-কে LIFO বলা হয় কেন?",
+            "Queue-কে FIFO বলা হয় কেন?",
+            "Browser back button কোন Data Structure ব্যবহার করে?",
+            "robots[1] কি return করবে?",
+            "Print queue-এ কোন Data Structure উপযুক্ত এবং কেন?",
+            "Undo/Redo button-এ কোন Data Structure ব্যবহার হয়?"
+          ]
+        },
+        "Sorting ও Searching Algorithm": {
+          "description": "Sorting algorithm তালিকাকে ক্রমানুসারে সাজায়। Binary Search sorted list-এ অনেক দ্রুত কাজ করে — 1000 item-এ মাত্র ~10 step। Big O notation দিয়ে algorithm-এর দক্ষতা মাপা হয়।",
+          "examples": [
+            "Bubble Sort: [5,3,1,4,2] → প্রতি pass-এ সবচেয়ে বড়টা শেষে যায়",
+            "Python built-in: sorted([5,3,1,4,2]) → [1,2,3,4,5]",
+            "Binary Search: 1000 item-এ মাত্র ~10 step-এ খুঁজে পায়",
+            "Linear Search: worst case 1000 step লাগতে পারে",
+            "Big O: Bubble Sort O(n²), Binary Search O(log n)",
+            "Google Search: অত্যাধুনিক sorting ও searching algorithm"
+          ],
+          "questions_answer": [
+            "Bubble Sort কিভাবে কাজ করে?",
+            "Binary Search কেন Linear Search-এর চেয়ে দ্রুত?",
+            "Binary Search কি unsorted list-এ কাজ করে?",
+            "Python-এ list sort করার built-in method কোনটি?",
+            "1000 item-এ Binary Search সর্বোচ্চ কত step নেবে?",
+            "Big O notation কি পরিমাপ করে?",
+            "কোন situation-এ Linear Search Binary Search-এর চেয়ে উপযুক্ত?"
+          ]
         }
       }
     }
   },
-  "class_3": {
-    "subjects": {
-      "robotics and coding": {
-        "publish_date": "2025-01-01",
-        "Chapter 1": {
-          "title": "Loop দিয়ে স্মার্ট কোডিং",
-          "description": "Loop মানে একই কাজ বারবার করা। Loop প্রোগ্রামিংকে সহজ করে এবং কম কোডে বেশি কাজ করা যায়।",
-          "topics": {
-            "Loop কি এবং কেন দরকার?": {
-              "description": "Loop হলো programming-এর এমন একটি কৌশল যেখানে একটি কাজ নির্দিষ্ট সংখ্যকবার বা কোনো শর্ত পূরণ না হওয়া পর্যন্ত বারবার করা হয়। Loop ছাড়া যদি 100 বার কিছু করতে চাও তাহলে 100 বার একই কোড লিখতে হবে — এটা সময়সাপেক্ষ ও অদক্ষ। Loop ব্যবহার করলে মাত্র 2-3 লাইনে 100 বারের কাজ হয়ে যায়। প্রকৃতিতেও Loop আছে — ঋতু পরিবর্তন, দিন-রাত, হৃদয়ের স্পন্দন সবই Loop।",
-              "examples": [
-                "ঘড়ির কাঁটা প্রতি মিনিটে একবার ঘোরে — এটা Forever Loop",
-                "প্রতিদিন সকালে দাঁত মাজা — এটা Daily Loop",
-                "Scratch: Repeat 10: Move 10 steps → Sprite মোট 100 পদক্ষেপ যাবে",
-                "Robot: Repeat 4: Forward 1m, Turn 90° → রোবট একটি বর্গক্ষেত্র আঁকবে",
-                "YouTube: অটো-play চালু থাকলে ভিডিও একের পর এক চলে — এটা Forever Loop",
-                "হৃদয় প্রতি মিনিটে 60-100 বার স্পন্দন করে — Forever Loop"
-              ],
-              "questions_answer": [
-                "Loop কি?",
-                "Loop ব্যবহার না করলে 100 বার কাজ করাতে কি করতে হবে?",
-                "Loop ব্যবহারের কি সুবিধা?",
-                "প্রকৃতিতে Loop-এর দুটি উদাহরণ দাও।",
-                "Repeat 10 Loop মানে কি?",
-                "রোবটকে দিয়ে বর্গক্ষেত্র আঁকাতে Loop কিভাবে ব্যবহার হবে?",
-                "Forever Loop কখন থামে?"
-              ]
-            },
-            "Scratch-এ Loop": {
-              "description": "Scratch-এ দুই ধরনের Loop আছে — 'Repeat N' এবং 'Forever'। Repeat N মানে ঠিক N বার কাজটি করো। Forever মানে কাজটি সারাক্ষণ চলতে থাকবে যতক্ষণ প্রোগ্রাম চলবে। Loop-এর ভেতরে যা রাখবে তাই বারবার হবে। Loop ব্যবহার করে অনেক মজার animation তৈরি করা যায়।",
-              "examples": [
-                "Forever: Move 10 steps → If on edge bounce → Sprite সারাক্ষণ দেয়ালে বাউন্স করবে",
-                "Repeat 5: Say 'Hello' → Sprite 5 বার Hello বলবে",
-                "Repeat 360: Turn 1 degree → Sprite পুরো একবার ঘুরবে",
-                "Forever: Change color by 10 → Sprite-এর রঙ ক্রমাগত বদলাবে",
-                "Repeat 4: Move 50 steps, Turn 90 degrees → বর্গক্ষেত্র তৈরি হবে"
-              ],
-              "questions_answer": [
-                "Scratch-এ কত ধরনের Loop আছে এবং কোনগুলো?",
-                "'Forever' Loop কখন থামে?",
-                "Repeat 5 মানে কি?",
-                "Sprite-কে দিয়ে একটি বৃত্ত আঁকাতে কোন Loop ব্যবহার করবে?",
-                "Forever Loop-এর ভেতরে 'Move 10 steps' রাখলে কি হবে?",
-                "Repeat 4: Move 100, Turn 90 দিলে কোন আকৃতি তৈরি হবে?",
-                "Loop ছাড়া Scratch-এ 10 বার Hello বলাতে কতগুলো block লাগবে?"
-              ]
-            },
-            "রোবটে Loop": {
-              "description": "বাস্তব রোবটেও Loop ব্যবহার হয়। Robot-এর program-এ Loop দিয়ে রোবটকে বারবার একই পথে চলানো, sensor বারবার পড়া, বা একই কাজ বারবার করানো সম্ভব। Roomba ভ্যাকুয়াম রোবট একটি Loop-এ চলে — এটা ঘরের পুরো মেঝে কভার করতে spiral pattern-এ চলতে থাকে। Industrial robot-রা Loop-এ একই কাজ দিনের পর দিন করে।",
-              "examples": [
-                "Repeat 4: Move forward 1m, Turn right 90° → Robot চারকোণ ঘুরবে",
-                "Forever: Read sensor → If obstacle then stop, else move → রোবট সারাক্ষণ সামনে যাবে ও বাধা দেখলে থামবে",
-                "Roomba: Repeat until battery low: Move in spiral → চার্জ শেষ না হওয়া পর্যন্ত পরিষ্কার করবে",
-                "Car manufacturing robot: Repeat for each car: Weld joint 1, Weld joint 2... → প্রতিটি গাড়ি একই ভাবে তৈরি হবে"
-              ],
-              "questions_answer": [
-                "রোবটে Loop কিভাবে ব্যবহার হয়?",
-                "Roomba রোবট কোন ধরনের Loop ব্যবহার করে?",
-                "রোবটকে বর্গক্ষেত্রে চালাতে Loop কিভাবে লিখবে?",
-                "Industrial robot-রা কেন Loop ব্যবহার করে?",
-                "Forever Loop-এ রোবট obstacle দেখলে কি করবে?",
-                "Loop ছাড়া রোবটকে 100 বার একই কাজ করাতে কি সমস্যা হবে?"
-              ]
-            }
-          }
+  "ai_and_ml": {
+    "Chapter 1": {
+      "title": "AI ও Machine Learning পরিচিতি",
+      "description": "Artificial Intelligence হলো machine-কে মানুষের মতো চিন্তা করতে শেখানো। Machine Learning হলো AI-এর সবচেয়ে শক্তিশালী শাখা।",
+      "topics": {
+        "AI কি এবং এর ইতিহাস": {
+          "description": "AI (Artificial Intelligence)-এর ধারণা 1956 সালে John McCarthy দিয়েছিলেন। AI তিন ধরনের: Narrow AI (একটি কাজে পারদর্শী — আমরা এখন এখানে), General AI (সব কাজে মানুষের মতো — এখনো তৈরি হয়নি), Super AI (মানুষের চেয়ে বেশি — ভবিষ্যৎ)। AI-এর দুটি পদ্ধতি: Rule-Based (programmer নিয়ম লেখে) ও Learning-Based (data থেকে নিজেই শেখে)।",
+          "examples": [
+            "Siri, Alexa, Google Assistant → Narrow AI (voice assistant)",
+            "Netflix/YouTube recommendation → Narrow AI",
+            "Tesla Autopilot → Narrow AI (driving)",
+            "AlphaGo → Narrow AI (শুধু Go খেলতে পারে)",
+            "ChatGPT, Claude → Advanced Narrow AI (language)",
+            "Spam filter → সহজতম AI"
+          ],
+          "questions_answer": [
+            "AI-এর ধারণার সূচনা কে করেন এবং কত সালে?",
+            "Narrow AI, General AI ও Super AI-এর পার্থক্য কি?",
+            "আমরা এখন AI-এর কোন স্তরে?",
+            "Rule-Based ও Learning-Based AI-এর পার্থক্য কি?",
+            "ChatGPT কি ধরনের AI?",
+            "AlphaGo কি General AI? কেন বা কেন না?",
+            "তোমার দৈনন্দিন জীবনে AI কোথায় কোথায় ব্যবহার হচ্ছে?"
+          ]
         },
-        "Chapter 2": {
-          "title": "Sensor — রোবটের ইন্দ্রিয়",
-          "description": "Sensor হলো রোবটের চোখ, কান, নাক, ত্বক। এটা দিয়ে রোবট পরিবেশ সম্পর্কে তথ্য সংগ্রহ করে এবং সঠিক সিদ্ধান্ত নেয়।",
-          "topics": {
-            "Sensor কি এবং কত ধরনের?": {
-              "description": "Sensor হলো এমন একটি যন্ত্র যা পরিবেশের শারীরিক বা রাসায়নিক পরিবর্তন অনুভব করে এবং সেই তথ্য কম্পিউটার বা রোবটে পাঠায়। মানুষের যেমন 5টি ইন্দ্রিয় আছে (দেখা, শোনা, গন্ধ, স্বাদ, স্পর্শ), রোবটেরও বিভিন্ন ধরনের sensor আছে। Sensor ছাড়া রোবট অন্ধ-বধির — সে পরিবেশ সম্পর্কে কিছুই জানতে পারবে না।",
-              "examples": [
-                "Light Sensor (আলো sensor) — আলো আছে কিনা বা কতটুকু আলো আছে বোঝে",
-                "Distance/Ultrasonic Sensor — সামনে কতটা দূরে কোনো বাধা আছে বোঝে",
-                "Temperature Sensor — পরিবেশের তাপমাত্রা মাপে",
-                "Touch Sensor — কোনো কিছু স্পর্শ হয়েছে কিনা বোঝে",
-                "Sound Sensor (Microphone) — শব্দ শুনতে পায়",
-                "Camera (Vision Sensor) — ছবি ও ভিডিও ধারণ করে দেখতে পায়",
-                "Color Sensor — রঙ চেনে (Line follower robot-এ ব্যবহার হয়)"
-              ],
-              "questions_answer": [
-                "Sensor কি?",
-                "মানুষের ইন্দ্রিয়ের সাথে robot sensor-এর মিল কোথায়?",
-                "Temperature Sensor কি পরিমাপ করে?",
-                "Sensor ছাড়া robot কিভাবে কাজ করবে?",
-                "Distance Sensor কোথায় ব্যবহার হয়?",
-                "Camera-কে কোন ধরনের Sensor বলা যায়?",
-                "তোমার বাড়িতে বা স্কুলে কোন ধরনের Sensor দেখেছো?"
-              ]
-            },
-            "Sensor দিয়ে সিদ্ধান্ত নেওয়া": {
-              "description": "Sensor থেকে তথ্য পাওয়ার পর রোবট সেই তথ্য বিশ্লেষণ করে সিদ্ধান্ত নেয়। এই সিদ্ধান্ত নেওয়ার প্রক্রিয়াকে 'Sense → Think → Act' বলা হয়। Sense মানে sensor দিয়ে তথ্য নেওয়া, Think মানে সেই তথ্য বিশ্লেষণ করা, Act মানে সঠিক কাজ করা। এটাই রোবটকে 'স্মার্ট' বানায়।",
-              "examples": [
-                "Distance < 10cm → STOP (বাধার কাছে গেলে থামে)",
-                "Light = Dark → Turn ON LED (অন্ধকারে আলো জ্বালে)",
-                "Temperature > 40°C → Turn ON fan (গরম হলে ফ্যান চালু করে)",
-                "Touch sensor activated → Reverse (কিছুতে ধাক্কা খেলে পেছনে যায়)",
-                "স্বয়ংক্রিয় দরজা: Person detected → Open door (মানুষ এলে দরজা খুলে)",
-                "স্মার্ট AC: Temperature > set_point → Turn ON cooling (তাপমাত্রা বাড়লে ঠান্ডা করে)"
-              ],
-              "questions_answer": [
-                "'Sense → Think → Act' মানে কি?",
-                "Distance < 10cm হলে robot কি করবে?",
-                "স্বয়ংক্রিয় দরজায় কোন Sensor থাকে এবং কিভাবে কাজ করে?",
-                "স্মার্ট AC-তে Temperature Sensor কি কাজ করে?",
-                "Sensor থেকে তথ্য না পেলে robot কি করবে?",
-                "তোমার কাছে যদি একটি robot থাকত, তুমি কোন Sensor ব্যবহার করে কি কাজ করাতে চাইতে?"
-              ]
-            }
-          }
+        "Machine Learning — তিন ধরনের শেখা": {
+          "description": "Machine Learning-এ computer data থেকে নিজেই শেখে। তিন ধরন: Supervised Learning (labeled data থেকে শেখে), Unsupervised Learning (unlabeled data থেকে pattern খোঁজে), Reinforcement Learning (reward/penalty থেকে শেখে)। Train → Test → Deploy — এই তিনটি ধাপে ML model তৈরি হয়।",
+          "examples": [
+            "Supervised: Email (spam/not spam label) → Spam filter",
+            "Supervised: ছবি (cat/dog label) → Image classifier",
+            "Unsupervised: Customer data → একই রকম customer group করা",
+            "Unsupervised: Anomaly detection → ব্যাংক fraud সনাক্ত",
+            "Reinforcement: AlphaGo → হাজারবার খেলে শিখেছে",
+            "Reinforcement: Robot walking → পড়লে penalty, হাঁটলে reward"
+          ],
+          "questions_answer": [
+            "Machine Learning কি?",
+            "Supervised, Unsupervised, Reinforcement — তিনটির পার্থক্য কি?",
+            "Labeled data মানে কি?",
+            "Spam filter কোন ধরনের ML?",
+            "AlphaGo কোন ধরনের ML ব্যবহার করেছে?",
+            "Train, Test, Deploy মানে কি?",
+            "ML ও traditional programming-এর মূল পার্থক্য কি?"
+          ]
         }
       }
-    }
-  },
-  "class_4": {
-    "subjects": {
-      "robotics and coding": {
-        "publish_date": "2025-01-01",
-        "Chapter 1": {
-          "title": "Condition ও Variable — স্মার্ট সিদ্ধান্ত",
-          "description": "If-Else দিয়ে প্রোগ্রাম সিদ্ধান্ত নেয়। Variable দিয়ে তথ্য মনে রাখে।",
-          "topics": {
-            "If-Else Condition": {
-              "description": "If-Else হলো প্রোগ্রামিংয়ের সবচেয়ে গুরুত্বপূর্ণ ধারণাগুলোর একটি। এটি প্রোগ্রামকে পরিস্থিতি অনুযায়ী ভিন্ন ভিন্ন কাজ করার সুযোগ দেয়। 'If (যদি) কোনো শর্ত সত্য হয় তাহলে এটা করো, Else (নইলে) ওটা করো' — এই নীতিতে কাজ করে। যেমন আমরা বলি: যদি বৃষ্টি হয় তাহলে ছাতা নাও, নইলে রোদচশমা নাও।",
-              "examples": [
-                "If score >= 50: print('Pass') Else: print('Fail')",
-                "If temperature > 35: Turn ON fan Else: Turn OFF fan",
-                "If door is locked: use key Else: just open",
-                "Scratch: If touching wall → bounce Else → move forward",
-                "Robot: If distance < 20cm → turn left Else → go straight",
-                "Phone: If battery < 20% → show warning Else → normal mode",
-                "YouTube: If age < 13 → Kids content Else → All content"
-              ],
-              "questions_answer": [
-                "If-Else মানে কি?",
-                "বৃষ্টির উদাহরণ দিয়ে If-Else বোঝাও।",
-                "score = 75 হলে 'If score >= 50: print Pass' কি print হবে?",
-                "Else কখন execute হয়?",
-                "রোবটের ক্ষেত্রে If-Else কিভাবে ব্যবহার হয়?",
-                "তুমি একটি স্মার্ট লাইটের জন্য If-Else condition লেখো।",
-                "If-Else ছাড়া কি robot স্মার্ট সিদ্ধান্ত নিতে পারত?"
-              ]
-            },
-            "Variable — তথ্যের বাক্স": {
-              "description": "Variable হলো কম্পিউটারের memory-তে একটি নির্দিষ্ট জায়গা যেখানে তথ্য রাখা হয় এবং পরে ব্যবহার করা যায়। Variable-এর একটি নাম থাকে এবং সে নামের মাধ্যমে তথ্য রাখা ও পড়া হয়। Variable-এর মান পরিবর্তন করা যায় — তাই এর নাম 'Variable' (পরিবর্তনশীল)। Variable ছাড়া প্রোগ্রাম কিছুই মনে রাখতে পারত না।",
-              "examples": [
-                "name = 'Rahim' → name নামের বাক্সে 'Rahim' রাখা হলো",
-                "age = 10 → age বাক্সে 10 রাখা হলো",
-                "score = 0 → score = score + 10 → score এখন 10",
-                "Scratch game-এ: score variable দিয়ে পয়েন্ট গোনা হয়",
-                "Robot-এ: distance variable দিয়ে সামনের বাধার দূরত্ব রাখা হয়",
-                "Shopping cart: total_price variable বাড়তে থাকে যতক্ষণ জিনিস যোগ হয়",
-                "Temperature sensor: current_temp variable প্রতি মিনিটে আপডেট হয়"
-              ],
-              "questions_answer": [
-                "Variable কি?",
-                "Variable-এর নাম 'Variable' কেন?",
-                "age = 10 লিখলে কি হয়?",
-                "score = 0, তারপর score = score + 5 করলে score কত হবে?",
-                "Variable ছাড়া game-এ পয়েন্ট রাখা সম্ভব হত?",
-                "তোমার নাম, বয়স ও ক্লাস Variable-এ রাখো।",
-                "Robot কেন distance Variable রাখে?"
-              ]
-            }
-          }
+    },
+    "Chapter 2": {
+      "title": "Neural Network ও Deep Learning",
+      "description": "Neural Network মানুষের মস্তিষ্কের অনুকরণে তৈরি। Deep Learning-এ অনেক Layer-এর Neural Network ব্যবহার হয়।",
+      "topics": {
+        "Neural Network — গঠন ও Training": {
+          "description": "Neural Network-এ তিনটি layer: Input (data প্রবেশ), Hidden (feature extract), Output (ফলাফল)। প্রতিটি connection-এ Weight আছে। Backpropagation দিয়ে weight আপডেট হয়, Gradient Descent loss কমায়। Epoch মানে পুরো dataset একবার দেখা।",
+          "examples": [
+            "Input: 784 pixels → 2 Hidden Layers → Output: 0-9 digit",
+            "Weight: সংযোগের গুরুত্ব — training-এ adjust হয়",
+            "ReLU: f(x) = max(0, x) → negative → 0",
+            "Loss Function (MSE): (predicted - actual)² এর গড়",
+            "Backpropagation: ভুল থেকে পেছনে এসে weight ঠিক করে",
+            "Epoch: পুরো dataset একবার দেখা — 100 epoch = 100 বার"
+          ],
+          "questions_answer": [
+            "Neural Network-এর তিনটি Layer-এর নাম ও কাজ বলো।",
+            "Weight কি এবং কি কাজ করে?",
+            "Backpropagation কি?",
+            "Loss Function কি পরিমাপ করে?",
+            "Epoch মানে কি?",
+            "Deep Learning কি?",
+            "মানুষের মস্তিষ্কের সাথে Neural Network-এর মিল কোথায়?"
+          ]
         },
-        "Chapter 2": {
-          "title": "Arduino দিয়ে প্রথম রোবোটিক্স প্রজেক্ট",
-          "description": "Arduino দিয়ে বাস্তব electronics project তৈরি করতে শিখবো। LED জ্বালানো থেকে শুরু।",
-          "topics": {
-            "Arduino পরিচিতি": {
-              "description": "Arduino হলো একটি Open-Source ছোট কম্পিউটার বোর্ড যেটা দিয়ে ইলেকট্রনিক্স ও রোবোটিক্স প্রজেক্ট তৈরি করা যায়। Arduino-তে C/C++ ভাষায় কোড লেখা হয় Arduino IDE সফটওয়্যার দিয়ে। কোড লেখার পর USB cable দিয়ে upload করলে Arduino সেই কোড অনুযায়ী কাজ করে। Arduino-তে Digital ও Analog পিন আছে যেগুলোর সাথে LED, motor, sensor যুক্ত করা যায়। পৃথিবীর লক্ষ লক্ষ hobbyist, student ও engineer Arduino ব্যবহার করে।",
-              "examples": [
-                "Arduino Uno — সবচেয়ে জনপ্রিয়, 14টি digital pin ও 6টি analog pin",
-                "Arduino Nano — ছোট আকারের, ছোট project-এ ব্যবহার হয়",
-                "Arduino Mega — বড় project-এর জন্য, বেশি pin আছে",
-                "Arduino IDE — বিনামূল্যে সফটওয়্যার, Windows/Mac/Linux-এ চলে",
-                "void setup() — একবার চলে, সেটিংস করা হয়",
-                "void loop() — বারবার চলে, মূল কাজ এখানে হয়"
-              ],
-              "questions_answer": [
-                "Arduino কি?",
-                "Arduino-তে কোড লেখার software-এর নাম কি?",
-                "Arduino-তে কোড Upload কিভাবে করা হয়?",
-                "Digital ও Analog pin-এর মধ্যে পার্থক্য কি?",
-                "void setup() ও void loop()-এর মধ্যে পার্থক্য কি?",
-                "Arduino Uno-তে কতটি digital pin আছে?",
-                "Arduino দিয়ে কি কি বানানো যায়?"
-              ]
-            },
-            "LED Circuit ও Blink প্রজেক্ট": {
-              "description": "LED (Light Emitting Diode) হলো একটি ছোট বিশেষ ডায়োড যা বিদ্যুৎ প্রবাহিত হলে আলো দেয়। LED-কে সরাসরি Arduino-তে লাগানো যায় না — একটি Resistor ব্যবহার করতে হয় যা অতিরিক্ত বিদ্যুৎ প্রবাহ রোধ করে। LED Blink প্রজেক্ট হলো Arduino-র সবচেয়ে প্রথম প্রজেক্ট — এটা দিয়ে প্রোগ্রামিং ও hardware connection-এর মূল বিষয় শেখা যায়।",
-              "examples": [
-                "Circuit: Arduino Pin 13 → Resistor (220Ω) → LED (+) → LED (-) → GND",
-                "digitalWrite(13, HIGH) → LED জ্বলে (5V পাঠায়)",
-                "digitalWrite(13, LOW) → LED নেভে (0V পাঠায়)",
-                "delay(1000) → 1000 মিলিসেকেন্ড (1 সেকেন্ড) অপেক্ষা করে",
-                "Traffic light project: লাল-হলুদ-সবুজ LED পর্যায়ক্রমে জ্বলে",
-                "SOS signal: ... --- ... (Morse code) LED দিয়ে করা যায়"
-              ],
-              "questions_answer": [
-                "LED মানে কি?",
-                "LED Circuit-এ Resistor কেন ব্যবহার করা হয়?",
-                "digitalWrite(13, HIGH) দিলে কি হয়?",
-                "delay(500) মানে কি?",
-                "LED Blink code-এ loop() function-এ কি থাকে?",
-                "Traffic light project-এ কতটি LED লাগবে এবং কোন রঙের?",
-                "Arduino-তে কোন pin নম্বরে LED লাগানো সবচেয়ে সহজ?"
-              ]
-            }
-          }
+        "CNN, NLP ও Transfer Learning": {
+          "description": "CNN (Convolutional Neural Network) ছবি চেনার জন্য। NLP (Natural Language Processing) ভাষা বোঝার জন্য। Transformer (2017) NLP-এ বিপ্লব এনেছে — GPT, BERT, Claude সব Transformer-based। Transfer Learning-এ pre-trained model নতুন কাজে ব্যবহার হয়।",
+          "examples": [
+            "CNN: Convolution Layer → Pooling → Fully Connected",
+            "CNN use: Face recognition, Object detection, Medical imaging",
+            "NLP: Tokenization → Embedding → Transformer → Output",
+            "GPT, BERT, Claude — সব Transformer-based",
+            "Transfer Learning: VGG16 (ImageNet) → fine-tune → নিজের ছবি classify",
+            "BERT: Google Search-এ query বোঝার জন্য ব্যবহার হয়"
+          ],
+          "questions_answer": [
+            "CNN কোন কাজে সবচেয়ে ভালো?",
+            "NLP মানে কি?",
+            "Transformer কত সালে উপস্থাপিত হয়?",
+            "Self-Attention কি করে?",
+            "Transfer Learning কেন উপকারী?",
+            "ChatGPT কোন architecture ব্যবহার করে?",
+            "Claude AI কে তৈরি করেছে?"
+          ]
         }
       }
-    }
-  },
-  "class_5": {
-    "subjects": {
-      "robotics and coding": {
-        "publish_date": "2025-01-01",
-        "Chapter 1": {
-          "title": "Python — সবচেয়ে জনপ্রিয় প্রোগ্রামিং ভাষা",
-          "description": "Python হলো বিশ্বের সবচেয়ে বেশি ব্যবহৃত প্রোগ্রামিং ভাষাগুলোর একটি। AI ও robotics-এর জন্য এটি সবচেয়ে উপযুক্ত।",
-          "topics": {
-            "Python কেন শিখবো?": {
-              "description": "Python হলো 1991 সালে Guido van Rossum তৈরি একটি প্রোগ্রামিং ভাষা। এর বিশেষত্ব হলো — এটি সহজ ইংরেজির মতো পড়া যায়। Google, NASA, Netflix, Instagram, YouTube সবাই Python ব্যবহার করে। Artificial Intelligence, Machine Learning, Data Science, Web Development, Robotics — সব ক্ষেত্রে Python ব্যবহার হয়। Python শেখার পর অন্য ভাষা শেখা অনেক সহজ হয়।",
-              "examples": [
-                "print('Hello, World!') → স্ক্রিনে Hello, World! দেখাবে",
-                "print(2 + 2) → স্ক্রিনে 4 দেখাবে",
-                "Google Search Engine-এর অনেক অংশ Python দিয়ে তৈরি",
-                "Instagram-এর backend Python Django দিয়ে তৈরি",
-                "NASA space mission-এ Python ব্যবহার হয়",
-                "ChatGPT ও অন্যান্য AI Python দিয়ে তৈরি"
-              ],
-              "questions_answer": [
-                "Python কে তৈরি করেছেন এবং কত সালে?",
-                "Python কেন সহজ বলে মনে করা হয়?",
-                "Python কোন কোন ক্ষেত্রে ব্যবহার হয়?",
-                "print() function কি কাজ করে?",
-                "Python দিয়ে কি AI তৈরি করা সম্ভব?",
-                "তুমি Python দিয়ে কি তৈরি করতে চাও?",
-                "Python জানলে ভবিষ্যতে কি ধরনের চাকরি পাওয়া যাবে?"
-              ]
-            },
-            "Python-এ Variable ও Data Type": {
-              "description": "Python-এ Variable তৈরি করতে কোনো বিশেষ keyword লাগে না — সরাসরি নাম দিয়ে মান assign করা যায়। Python-এ চার ধরনের মূল Data Type আছে: String (লেখা), Integer (পূর্ণসংখ্যা), Float (দশমিক সংখ্যা), Boolean (True/False)। Python নিজেই বুঝে Variable-টি কোন type — এটা Python-এর বিশেষত্ব।",
-              "examples": [
-                "name = 'Rahim'  # String — লেখার জন্য quote ব্যবহার হয়",
-                "age = 12        # Integer — দশমিক ছাড়া সংখ্যা",
-                "height = 4.5    # Float — দশমিক সহ সংখ্যা",
-                "is_student = True   # Boolean — শুধু True বা False",
-                "robot_name = 'Namira'  # String",
-                "speed = 100     # Integer",
-                "print(type(age))  # <class 'int'> দেখাবে"
-              ],
-              "questions_answer": [
-                "Python-এ Variable তৈরিতে কোনো keyword লাগে?",
-                "String, Integer, Float, Boolean — এই চারটির পার্থক্য কি?",
-                "name = 'Rahim' লিখলে name-এ কি data type আছে?",
-                "is_robot = True লিখলে is_robot-এর data type কি?",
-                "height = 5.5 লিখলে এটি কোন data type?",
-                "type() function কি কাজ করে?",
-                "Boolean data type-এ মাত্র কয়টি মান থাকতে পারে এবং কি কি?"
-              ]
-            }
-          }
+    },
+    "Chapter 3": {
+      "title": "AI Ethics ও Bangladesh-এর Tech ভবিষ্যৎ",
+      "description": "AI-এর নৈতিক ব্যবহার এবং বাংলাদেশে প্রযুক্তির সম্ভাবনা।",
+      "topics": {
+        "AI Ethics — দায়িত্বশীল AI": {
+          "description": "AI অত্যন্ত শক্তিশালী কিন্তু ভুল ব্যবহারে ক্ষতিকর। AI Bias হয় যখন training data-তে পক্ষপাত থাকে। Privacy concern — AI আমাদের তথ্য সংগ্রহ করে। Deepfake দিয়ে মিথ্যা ভিডিও তৈরি সম্ভব। Explainable AI (XAI) বোঝায় AI কেন এই সিদ্ধান্ত নিল।",
+          "examples": [
+            "Amazon hiring AI: মহিলাদের বিরুদ্ধে biased ছিল",
+            "Facial Recognition: কৃষ্ণাঙ্গ মানুষদের accuracy কম",
+            "Cambridge Analytica: Facebook data দিয়ে নির্বাচনে হস্তক্ষেপ",
+            "Deepfake: যেকারো মুখ দিয়ে মিথ্যা ভিডিও তৈরি",
+            "XAI: ব্যাংক loan reject করলে AI কেন করল তা জানানো"
+          ],
+          "questions_answer": [
+            "AI Bias কি এবং কেন হয়?",
+            "Deepfake কিভাবে সমস্যা তৈরি করতে পারে?",
+            "Explainable AI (XAI) কেন দরকার?",
+            "Data Privacy AI-তে কেন গুরুত্বপূর্ণ?",
+            "Responsible AI developer হতে কি কি করতে হবে?",
+            "AI Bias কিভাবে prevent করা যায়?",
+            "Autonomous weapon তৈরি নৈতিক কিনা — তোমার মতামত কি?"
+          ]
         },
-        "Chapter 2": {
-          "title": "Python-এ Loop ও Condition",
-          "description": "Python-এ for loop, while loop এবং if-elif-else দিয়ে স্মার্ট প্রোগ্রাম লেখা যায়।",
-          "topics": {
-            "Python-এ For Loop": {
-              "description": "Python-এ for loop দিয়ে একটি range বা list-এর প্রতিটি উপাদান একে একে ব্যবহার করা যায়। range(n) দিয়ে 0 থেকে n-1 পর্যন্ত সংখ্যা পাওয়া যায়। Python-এর for loop অন্য ভাষার চেয়ে বেশি পরিষ্কার ও সহজ। Indentation (ভেতরে লেখা) গুরুত্বপূর্ণ — loop-এর ভেতরের code 4 space বা 1 tab দিয়ে ভেতরে লিখতে হয়।",
-              "examples": [
-                "for i in range(5):\n    print(i)  # 0, 1, 2, 3, 4 print হবে",
-                "for i in range(1, 6):\n    print(i)  # 1, 2, 3, 4, 5 print হবে",
-                "fruits = ['apple', 'mango', 'banana']\nfor fruit in fruits:\n    print(fruit)",
-                "for i in range(1, 11):\n    print(i * 2)  # 2-এর নামতা",
-                "robots = ['R2D2', 'C3PO', 'WALL-E']\nfor robot in robots:\n    print('Hello, ' + robot)"
-              ],
-              "questions_answer": [
-                "for loop কি কাজ করে?",
-                "range(5) কোন সংখ্যাগুলো দেয়?",
-                "range(1, 6) কোন সংখ্যাগুলো দেয়?",
-                "Python-এ Indentation কেন গুরুত্বপূর্ণ?",
-                "একটি list-এর সব element print করতে for loop কিভাবে লিখবে?",
-                "for loop দিয়ে 5-এর নামতা print করার code লেখো।",
-                "for loop ও while loop-এর মধ্যে পার্থক্য কি?"
-              ]
-            },
-            "Python-এ If-Elif-Else": {
-              "description": "Python-এ if, elif (else if-এর সংক্ষিপ্ত রূপ), else দিয়ে একাধিক শর্ত পরীক্ষা করা যায়। প্রথমে if পরীক্ষা হয়, মিথ্যা হলে elif পরীক্ষা হয়, সব মিথ্যা হলে else চলে। এটি দিয়ে গ্রেডিং সিস্টেম, ট্রাফিক কন্ট্রোল, রোবটের সিদ্ধান্ত — সব ধরনের logical decision লেখা যায়।",
-              "examples": [
-                "score = 75\nif score >= 80:\n    print('A')\nelif score >= 60:\n    print('B')\nelif score >= 40:\n    print('C')\nelse:\n    print('F')",
-                "temp = 38\nif temp > 37.5:\n    print('Fever! See doctor')\nelif temp > 36:\n    print('Normal')\nelse:\n    print('Too cold!')",
-                "robot_distance = 15\nif robot_distance < 10:\n    print('STOP')\nelif robot_distance < 30:\n    print('SLOW DOWN')\nelse:\n    print('GO FULL SPEED')"
-              ],
-              "questions_answer": [
-                "elif মানে কি?",
-                "score = 75 হলে প্রথম example-এ কি print হবে?",
-                "score = 55 হলে কি print হবে?",
-                "score = 30 হলে কি print হবে?",
-                "if শর্ত সত্য হলে elif পরীক্ষা হয়?",
-                "robot_distance = 5 হলে robot কি করবে?",
-                "তোমার নিজের একটি if-elif-else উদাহরণ লেখো।"
-              ]
-            }
-          }
-        }
-      }
-    }
-  },
-  "class_6": {
-    "subjects": {
-      "programming and electronics": {
-        "publish_date": "2025-01-01",
-        "Chapter 1": {
-          "title": "Python Function ও Data Structure",
-          "description": "Function দিয়ে কোড reuse করা যায়। List ও Dictionary দিয়ে তথ্য সংগঠিত রাখা যায়।",
-          "topics": {
-            "Function — পুনর্ব্যবহারযোগ্য কোড": {
-              "description": "Function হলো এমন কোডের একটি ব্লক যা একটি নির্দিষ্ট কাজ করে এবং যতবার খুশি ডাকা যায়। def keyword দিয়ে Python-এ function তৈরি করা হয়। Function-এ parameter দেওয়া যায় (input), এবং return দিয়ে ফলাফল ফেরত পাঠানো যায় (output)। Function ছাড়া একই কোড বারবার লিখতে হত যা সময়সাপেক্ষ ও ভুলের সম্ভাবনা বাড়ায়।",
-              "examples": [
-                "def greet(name):\n    print('Hello, ' + name + '!')\n\ngreet('Rahim')   # Hello, Rahim!\ngreet('Karim')   # Hello, Karim!",
-                "def add(a, b):\n    return a + b\n\nresult = add(5, 3)  # result = 8",
-                "def calculate_area(length, width):\n    area = length * width\n    return area\n\nroom = calculate_area(10, 5)  # room = 50",
-                "def robot_move(direction, steps):\n    print(f'Moving {direction} for {steps} steps')\n\nrobot_move('forward', 5)",
-                "def check_grade(score):\n    if score >= 80: return 'A'\n    elif score >= 60: return 'B'\n    else: return 'F'"
-              ],
-              "questions_answer": [
-                "Function কি?",
-                "Python-এ function তৈরিতে কোন keyword ব্যবহার হয়?",
-                "Parameter ও Return মানে কি?",
-                "greet('Rahim') call করলে কি output আসবে?",
-                "add(10, 7) call করলে কি return হবে?",
-                "Function ব্যবহারের সুবিধা কি?",
-                "calculate_area(6, 4) কল করলে কি return হবে?"
-              ]
-            },
-            "List ও Dictionary": {
-              "description": "List হলো Python-এ ক্রমানুসারে সাজানো একাধিক মানের সংগ্রহ। Square bracket [] দিয়ে list তৈরি হয়। Index দিয়ে নির্দিষ্ট element access করা যায় (0 থেকে শুরু)। Dictionary হলো key-value pair-এ তথ্য রাখার পাত্র — real-world-এর dictionary-র মতোই কাজ করে, শুধু শব্দের বদলে যেকোনো key ব্যবহার করা যায়।",
-              "examples": [
-                "robots = ['Namira', 'ASIMO', 'Sophia', 'R2D2']\nprint(robots[0])   # Namira\nprint(robots[2])   # Sophia",
-                "robots.append('Wall-E')  # তালিকায় Wall-E যোগ হলো\nprint(len(robots))    # 5",
-                "student = {'name': 'Rahim', 'age': 12, 'class': 6}\nprint(student['name'])   # Rahim\nprint(student['age'])    # 12",
-                "robot_info = {'name': 'Namira', 'speed': 10, 'color': 'blue'}\nrobot_info['speed'] = 15  # speed update করা হলো",
-                "grades = [85, 72, 90, 65, 88]\nprint(sum(grades) / len(grades))  # গড় বের করা"
-              ],
-              "questions_answer": [
-                "List ও Dictionary-র মধ্যে পার্থক্য কি?",
-                "robots[0] মানে কি?",
-                "List-এ নতুন element যোগ করার method কোনটি?",
-                "Dictionary-তে key ও value মানে কি?",
-                "student['name'] দিলে কি output আসবে?",
-                "len() function কি করে?",
-                "robots[2] = 'New Robot' লিখলে তালিকায় কি হবে?"
-              ]
-            }
-          }
-        },
-        "Chapter 2": {
-          "title": "Arduino দিয়ে স্মার্ট সার্কিট",
-          "description": "Ultrasonic sensor দিয়ে দূরত্ব মাপা এবং DC motor নিয়ন্ত্রণ করা শিখবো।",
-          "topics": {
-            "Ultrasonic Sensor (HC-SR04) দিয়ে দূরত্ব মাপা": {
-              "description": "Ultrasonic Sensor (HC-SR04) শব্দ তরঙ্গ পাঠিয়ে সামনের বাধার দূরত্ব মাপে। Trig pin থেকে ultrasonic pulse পাঠানো হয়, Echo pin সেই pulse ফিরে আসার সময় পরিমাপ করে। সময় × শব্দের বেগ ÷ 2 = দূরত্ব। এই sensor গাড়ির parking sensor, রোবটের obstacle avoidance, স্বয়ংক্রিয় দরজা — সব জায়গায় ব্যবহার হয়।",
-              "examples": [
-                "গাড়ির পেছনে parking sensor — বাধার কাছে গেলে beep বাড়ে",
-                "রোবট: If distance < 15cm → turn left (বাধা এড়ানো)",
-                "স্বয়ংক্রিয় হাত ধোয়ার কল — হাত কাছে গেলে পানি আসে",
-                "দূরত্ব হিসাব: time × 0.034 / 2 = centimeter",
-                "Arduino code: pulseIn(ECHO, HIGH) দিয়ে echo time পড়া",
-                "Water level sensor হিসেবেও ব্যবহার করা যায়"
-              ],
-              "questions_answer": [
-                "HC-SR04 sensor কিভাবে কাজ করে?",
-                "Trig ও Echo pin-এর কাজ কি?",
-                "দূরত্ব হিসাব করার formula কি?",
-                "এই sensor কোথায় কোথায় ব্যবহার হয়?",
-                "দূরত্ব 10cm হলে robot কি করবে (যদি limit 15cm হয়)?",
-                "Water level sensor কিভাবে কাজ করবে?",
-                "Ultrasonic মানে কি?"
-              ]
-            },
-            "DC Motor ও L298N Motor Driver": {
-              "description": "DC Motor হলো রোবটের চাকা ঘোরানোর যন্ত্র। Arduino সরাসরি motor চালাতে পারে না কারণ motor-এর বেশি বিদ্যুৎ দরকার। L298N Motor Driver হলো একটি H-Bridge circuit যা Arduino-র কম বিদ্যুতের সংকেতকে motor চালানোর জন্য বেশি বিদ্যুতে রূপান্তর করে। PWM (Pulse Width Modulation) দিয়ে motor-এর speed নিয়ন্ত্রণ করা হয়।",
-              "examples": [
-                "L298N: IN1=HIGH, IN2=LOW → motor clockwise (সামনে)",
-                "L298N: IN1=LOW, IN2=HIGH → motor counter-clockwise (পেছনে)",
-                "L298N: IN1=LOW, IN2=LOW → motor stop",
-                "analogWrite(ENA, 200) → speed = 200/255 × 100% ≈ 78% speed",
-                "analogWrite(ENA, 100) → কম speed (প্রায় 39%)",
-                "Robot car: 2টি motor — বাম চাকা ও ডান চাকা আলাদা নিয়ন্ত্রণ করে ঘোরে"
-              ],
-              "questions_answer": [
-                "DC Motor কি কাজ করে?",
-                "Arduino সরাসরি motor কেন চালাতে পারে না?",
-                "L298N Motor Driver কি কাজ করে?",
-                "PWM দিয়ে কি নিয়ন্ত্রণ করা হয়?",
-                "IN1=HIGH, IN2=LOW দিলে motor কোন দিকে যাবে?",
-                "analogWrite(ENA, 255) মানে motor কত % speed-এ চলবে?",
-                "Robot car-এ দুটি motor কেন আলাদা নিয়ন্ত্রণ করা হয়?"
-              ]
-            }
-          }
-        }
-      }
-    }
-  },
-  "class_7": {
-    "subjects": {
-      "programming and electronics": {
-        "publish_date": "2025-01-01",
-        "Chapter 1": {
-          "title": "Object-Oriented Programming (OOP)",
-          "description": "OOP হলো প্রোগ্রামিংয়ের একটি শক্তিশালী পদ্ধতি যেখানে বাস্তব জীবনের বস্তুর মতো করে কোড লেখা হয়।",
-          "topics": {
-            "Class ও Object — OOP-এর মূল ভিত্তি": {
-              "description": "Class হলো একটি blueprint বা ছাঁচ — যেমন একটি বাড়ির নকশা। Object হলো সেই ছাঁচ থেকে তৈরি বাস্তব জিনিস — যেমন সেই নকশা দিয়ে তৈরি বাড়ি। একটি Class থেকে অসংখ্য Object তৈরি করা যায়। প্রতিটি Object-এর নিজস্ব বৈশিষ্ট্য (Attribute) ও আচরণ (Method) থাকে। OOP ব্যবহার করে বড় ও জটিল software সহজে লেখা ও maintain করা যায়।",
-              "examples": [
-                "class Robot:\n    def __init__(self, name, color, speed):\n        self.name = name\n        self.color = color\n        self.speed = speed\n    def move(self):\n        print(f'{self.name} is moving at {self.speed} m/s')\n\nr1 = Robot('Namira', 'blue', 5)\nr2 = Robot('ASIMO', 'white', 3)\nr1.move()  # Namira is moving at 5 m/s",
-                "গাড়ির blueprint (Class) থেকে অনেক গাড়ি (Object) তৈরি হয়",
-                "প্রতিটি student (Object) একই Student class-এর",
-                "self মানে object নিজেকে বোঝায়",
-                "__init__ হলো constructor — object তৈরি হলেই চলে"
-              ],
-              "questions_answer": [
-                "Class ও Object-এর মধ্যে পার্থক্য কি?",
-                "__init__ method কি এবং কখন চলে?",
-                "self keyword কেন ব্যবহার হয়?",
-                "একটি Class থেকে কতটি Object তৈরি করা যায়?",
-                "Attribute ও Method-এর পার্থক্য কি?",
-                "r1.move() call করলে কি output আসবে?",
-                "OOP ব্যবহারের সুবিধা কি?"
-              ]
-            },
-            "Inheritance ও Polymorphism": {
-              "description": "Inheritance মানে একটি class আরেকটি class-এর সব বৈশিষ্ট্য ও method পায়। Child class Parent class-কে extend করে নতুন বৈশিষ্ট্য যোগ করতে পারে। Polymorphism মানে একই method বিভিন্ন class-এ বিভিন্নভাবে কাজ করে। এই দুটি concept OOP-কে অত্যন্ত শক্তিশালী করে।",
-              "examples": [
-                "class FlyingRobot(Robot):  # Robot-এর সব feature পাবে\n    def __init__(self, name, color, speed, max_altitude):\n        super().__init__(name, color, speed)\n        self.max_altitude = max_altitude\n    def fly(self):\n        print(f'{self.name} flying at {self.max_altitude}m')",
-                "class Animal:\n    def speak(self): pass\nclass Dog(Animal):\n    def speak(self): print('Woof!')\nclass Cat(Animal):\n    def speak(self): print('Meow!') → Polymorphism",
-                "Human → Employee → Manager (inheritance chain)",
-                "super() দিয়ে parent class-এর method call করা যায়"
-              ],
-              "questions_answer": [
-                "Inheritance কি?",
-                "Child class কি parent class-এর সব method ব্যবহার করতে পারে?",
-                "super() কি করে?",
-                "Polymorphism মানে কি?",
-                "FlyingRobot class-এ কোন extra method আছে?",
-                "Dog ও Cat class-এ speak() কিভাবে আলাদা কাজ করে?",
-                "Inheritance ব্যবহারের সুবিধা কি?"
-              ]
-            }
-          }
-        },
-        "Chapter 2": {
-          "title": "Line Follower Robot তৈরি",
-          "description": "Line Follower Robot কালো রেখা অনুসরণ করে চলে। এটি রোবোটিক্সের একটি classic প্রজেক্ট।",
-          "topics": {
-            "IR Sensor দিয়ে লাইন ডিটেকশন": {
-              "description": "IR (Infrared) Sensor অদৃশ্য ইনফ্রারেড আলো পাঠায় এবং প্রতিফলিত আলো পরিমাপ করে। কালো রঙ IR আলো শোষণ করে (কম প্রতিফলন), সাদা রঙ প্রতিফলিত করে (বেশি প্রতিফলন)। এই পার্থক্য ব্যবহার করে রোবট লাইন চেনে। সাধারণত দুটি IR sensor ব্যবহার করা হয় — বাম ও ডান।",
-              "examples": [
-                "Left=0 (কালো), Right=0 (কালো) → সামনে যাও",
-                "Left=0 (কালো), Right=1 (সাদা) → বাঁয়ে ঘোরো",
-                "Left=1 (সাদা), Right=0 (কালো) → ডানে ঘোরো",
-                "Left=1 (সাদা), Right=1 (সাদা) → থামো (লাইন শেষ)",
-                "Amazon warehouse robot floor-এ লাইন ধরে মালামাল বহন করে",
-                "Hospital robot ওষুধ ডেলিভারিতে line following ব্যবহার করে"
-              ],
-              "questions_answer": [
-                "IR Sensor কিভাবে কালো ও সাদা পার্থক্য করে?",
-                "কালো রঙে IR আলোর কি হয়?",
-                "Left=0, Right=1 হলে robot কোন দিকে যাবে?",
-                "দুটো sensor-ই সাদা দেখালে robot কি করবে?",
-                "Line Follower robot কোথায় কোথায় ব্যবহার হয়?",
-                "তিনটি IR sensor থাকলে robot আরো ভালো কাজ করবে কেন?",
-                "IR sensor কোন ধরনের আলো ব্যবহার করে?"
-              ]
-            },
-            "PID Control পরিচিতি": {
-              "description": "PID Control হলো রোবটকে smooth ও accurate ভাবে লাইনে রাখার পদ্ধতি। P (Proportional) — লাইন থেকে কতটুকু সরে গেছে সেটা দেখে correct করে। I (Integral) — অতীতের সব error যোগ করে। D (Derivative) — কত দ্রুত সরছে সেটা দেখে। এই তিনটি মিলে রোবট অনেক stable ও সঠিকভাবে লাইনে থাকে। PID control শুধু robot নয়, AC, গাড়ির cruise control, drone — সব জায়গায় ব্যবহার হয়।",
-              "examples": [
-                "P মাত্র ব্যবহার করলে robot oscillate করে",
-                "PID ব্যবহার করলে robot smooth curve নেয়",
-                "গাড়ির cruise control: PID দিয়ে speed constant রাখে",
-                "Drone: PID দিয়ে হাওয়ায় stable থাকে",
-                "AC: PID দিয়ে room temperature নির্দিষ্ট রাখে",
-                "Kp, Ki, Kd — তিনটি constant tune করতে হয়"
-              ],
-              "questions_answer": [
-                "PID-এর পূর্ণ নাম কি?",
-                "P (Proportional) কি পরিমাপ করে?",
-                "শুধু P ব্যবহার করলে কি সমস্যা হয়?",
-                "PID control কোথায় কোথায় ব্যবহার হয়?",
-                "Drone-এ PID কেন দরকার?",
-                "Kp, Ki, Kd tune করার মানে কি?",
-                "PID ছাড়া Line Follower robot কেমন চলবে?"
-              ]
-            }
-          }
-        }
-      }
-    }
-  },
-  "class_8": {
-    "subjects": {
-      "programming and ai basics": {
-        "publish_date": "2025-01-01",
-        "Chapter 1": {
-          "title": "Data Structures ও Algorithm Analysis",
-          "description": "Data Structures হলো তথ্য সংগঠিত করার পদ্ধতি। সঠিক Data Structure ব্যবহার করলে program দ্রুত ও দক্ষ হয়।",
-          "topics": {
-            "Stack, Queue ও Linked List": {
-              "description": "Stack হলো LIFO (Last In First Out) — যা শেষে ঢুকবে সে আগে বের হবে, যেমন বাসন স্তুপ। Queue হলো FIFO (First In First Out) — যা আগে ঢুকবে সে আগে বেরোবে, যেমন টিকেটের লাইন। Linked List হলো এমন একটি structure যেখানে প্রতিটি element (node) পরের element-এর address জানে। এই তিনটি Data Structure সব বড় software-এ ব্যবহার হয়।",
-              "examples": [
-                "Stack: browser back button — শেষে যা দেখেছিলে আগে যাবে",
-                "Stack: Undo/Redo — শেষ পরিবর্তনটা আগে undo হয়",
-                "Queue: Printer queue — আগে যা পাঠানো হয়েছে আগে print হয়",
-                "Queue: Call center — আগে call করলে আগে service পায়",
-                "Linked List: Music playlist — প্রতিটি গান পরেরটির দিকে পয়েন্ট করে",
-                "Python-এ Stack: list.append() ও list.pop() দিয়ে implement করা যায়"
-              ],
-              "questions_answer": [
-                "LIFO ও FIFO-র পার্থক্য কি?",
-                "Stack কি ধরনের পরিস্থিতিতে ব্যবহার হয়?",
-                "Browser-এর back button কোন Data Structure ব্যবহার করে?",
-                "Queue-এর বাস্তব উদাহরণ দাও।",
-                "Linked List-এ প্রতিটি node কি জানে?",
-                "Python-এ Stack implement করতে কোন methods ব্যবহার হয়?",
-                "Call center-এ কোন Data Structure ব্যবহার হয় এবং কেন?"
-              ]
-            },
-            "Sorting ও Searching Algorithm": {
-              "description": "Sorting Algorithm তালিকাকে ক্রমানুসারে সাজায়। Bubble Sort প্রতিবার পাশের দুটি element তুলনা করে। Selection Sort প্রতিবার সবচেয়ে ছোটটা খুঁজে সামনে রাখে। Binary Search sorted তালিকায় অর্ধেক অর্ধেক করে খোঁজে — খুব দ্রুত। Algorithm-এর দক্ষতা মাপা হয় Big O notation দিয়ে।",
-              "examples": [
-                "Bubble Sort: [5,3,1,4,2] → প্রতি pass-এ সবচেয়ে বড়টা শেষে যায়",
-                "Selection Sort: প্রতিবার সবচেয়ে ছোট element খুঁজে সামনে রাখে",
-                "Binary Search: 1000টি number-এ মাত্র 10 step-এ খুঁজে পায়",
-                "Linear Search: worst case 1000 step লাগতে পারে",
-                "Google Search: অত্যাধুনিক sorting ও searching algorithm ব্যবহার করে",
-                "E-commerce: দাম অনুযায়ী sort — sorting algorithm ব্যবহার"
-              ],
-              "questions_answer": [
-                "Sorting Algorithm কি কাজ করে?",
-                "Bubble Sort কিভাবে কাজ করে?",
-                "Binary Search কেন Linear Search-এর চেয়ে দ্রুত?",
-                "Binary Search কি unsorted list-এ কাজ করে?",
-                "1000টি number-এ Binary Search সর্বোচ্চ কত step নেবে?",
-                "Big O notation কি পরিমাপ করে?",
-                "কোন sorting algorithm শিখতে সবচেয়ে সহজ মনে হলো?"
-              ]
-            }
-          }
-        },
-        "Chapter 2": {
-          "title": "AI কি এবং কিভাবে কাজ করে",
-          "description": "Artificial Intelligence মানে মেশিনকে মানুষের মতো বুদ্ধিমান করা। এটা কম্পিউটার বিজ্ঞানের সবচেয়ে উত্তেজনাপূর্ণ শাখা।",
-          "topics": {
-            "AI-এর পরিচয় ও ইতিহাস": {
-              "description": "AI (Artificial Intelligence)-এর ধারণা 1956 সালে শুরু হয় John McCarthy-র হাত ধরে। AI হলো কম্পিউটারকে এমনভাবে প্রোগ্রাম করা যাতে সে মানুষের মতো চিন্তা, সিদ্ধান্ত ও শিখতে পারে। AI তিন স্তরের: Narrow AI (একটি কাজে পারদর্শী), General AI (সব কাজে মানুষের মতো), Super AI (মানুষের চেয়ে বেশি বুদ্ধিমান — এখনো তৈরি হয়নি)। আমরা এখন Narrow AI-এর যুগে আছি।",
-              "examples": [
-                "Siri, Alexa, Google Assistant — Narrow AI (voice assistant)",
-                "Netflix recommendation system — Narrow AI",
-                "Tesla Autopilot — Narrow AI (driving)",
-                "AlphaGo — Narrow AI (শুধু Go খেলতে পারে)",
-                "ChatGPT — Advanced Narrow AI (language)",
-                "AI robot surgeon — Narrow AI (surgery assist)",
-                "Spam filter — সহজ Narrow AI"
-              ],
-              "questions_answer": [
-                "AI-এর পূর্ণ নাম কি?",
-                "AI-এর ধারণা কত সালে শুরু হয়?",
-                "Narrow AI, General AI ও Super AI-এর পার্থক্য কি?",
-                "আমরা এখন AI-এর কোন স্তরে আছি?",
-                "Siri কি ধরনের AI?",
-                "Super AI কি এখনো তৈরি হয়েছে?",
-                "তোমার জীবনে AI কোথায় কোথায় ব্যবহার হচ্ছে?"
-              ]
-            },
-            "Machine Learning — AI-এর মূল শক্তি": {
-              "description": "Machine Learning হলো AI-এর এমন একটি শাখা যেখানে কম্পিউটার নির্দিষ্ট নিয়ম না শিখে নিজেই data থেকে pattern খুঁজে শেখে। আমরা যেমন অনেকবার দেখে বা করে শিখি, ML model-ও তেমনি অনেক data দেখে শেখে। Train → Test → Deploy — এই তিনটি ধাপে ML model তৈরি হয়। ML-এর কারণেই আজকের AI এত শক্তিশালী।",
-              "examples": [
-                "Spam filter: লক্ষ email দেখে শিখেছে কোনটা spam",
-                "Face Recognition: কোটি ছবি দেখে মুখ চিনতে শিখেছে",
-                "YouTube recommendation: তোমার দেখার ইতিহাস থেকে শিখেছে",
-                "Medical AI: হাজারো X-ray দেখে রোগ চিনতে শিখেছে",
-                "Self-driving car: কোটি কিলোমিটার ড্রাইভিং data থেকে শিখেছে",
-                "Voice recognition: লক্ষ ঘণ্টা কথা শুনে চেনা শিখেছে"
-              ],
-              "questions_answer": [
-                "Machine Learning কি?",
-                "ML ও traditional programming-এর পার্থক্য কি?",
-                "ML model কিভাবে শেখে?",
-                "Train, Test, Deploy মানে কি?",
-                "Spam filter ML কিভাবে ব্যবহার করে?",
-                "Face Recognition কি ধরনের data দিয়ে train করা হয়?",
-                "YouTube recommendation তোমার সম্পর্কে কি জানে?"
-              ]
-            }
-          }
-        }
-      }
-    }
-  },
-  "class_9": {
-    "subjects": {
-      "ai and robotics": {
-        "publish_date": "2025-01-01",
-        "Chapter 1": {
-          "title": "ML-এর তিন ধরন",
-          "description": "Supervised, Unsupervised ও Reinforcement Learning — Machine Learning-এর তিনটি মূল পদ্ধতি।",
-          "topics": {
-            "Supervised Learning": {
-              "description": "Supervised Learning-এ model-কে labeled data দিয়ে train করা হয় — প্রতিটি input-এর সাথে সঠিক output দেওয়া থাকে। Model এই উদাহরণ দেখে নিজে নিজে pattern শিখে। পরে নতুন input দিলে সে শেখা pattern ব্যবহার করে output দেয়। Classification (বিভাগ নির্ধারণ) ও Regression (সংখ্যা prediction) — দুটি প্রধান ধরন।",
-              "examples": [
-                "Email classification: labeled email (spam/not spam) → spam filter train",
-                "Image classification: labeled ছবি (cat/dog) → image classifier",
-                "House price prediction: বাড়ির সাইজ, অবস্থান → দাম predict",
-                "Medical diagnosis: labeled X-ray (disease/normal) → AI doctor",
-                "Sentiment analysis: labeled review (positive/negative) → opinion AI",
-                "Handwriting recognition: labeled letters → OCR system"
-              ],
-              "questions_answer": [
-                "Supervised Learning কি?",
-                "Labeled data মানে কি?",
-                "Classification ও Regression-এর পার্থক্য কি?",
-                "Image classification কোন ধরনের Supervised Learning?",
-                "House price prediction কি ধরনের task?",
-                "Labeled data তৈরি করতে কি কি লাগে?",
-                "Supervised Learning-এর সীমাবদ্ধতা কি?"
-              ]
-            },
-            "Unsupervised ও Reinforcement Learning": {
-              "description": "Unsupervised Learning-এ unlabeled data থেকে model নিজেই লুকানো pattern ও গ্রুপ খুঁজে বের করে। কেউ বলে দেয় না কোনটা কি — model নিজেই সিদ্ধান্ত নেয়। Reinforcement Learning-এ Agent পরিবেশের সাথে interact করে শেখে — ভালো কাজে reward পায়, খারাপ কাজে penalty। এই পদ্ধতিতে AlphaGo, robotics locomotion শেখানো হয়।",
-              "examples": [
-                "Customer segmentation: কোন customer কোন গ্রুপে — unlabeled",
-                "Anomaly detection: ব্যাংক লেনদেনে অস্বাভাবিক pattern — fraud detection",
-                "K-means clustering: data-কে K টি গ্রুপে ভাগ করে",
-                "AlphaGo: প্রতিটি চাল-এ reward/penalty পেয়ে শিখেছে",
-                "Robot walking: পড়ে গেলে penalty, হাঁটলে reward → শেষে হাঁটতে শিখেছে",
-                "Atari game AI: score বাড়ানোর কৌশল নিজে নিজে শিখেছে"
-              ],
-              "questions_answer": [
-                "Unsupervised Learning কিভাবে Supervised থেকে আলাদা?",
-                "Clustering মানে কি?",
-                "K-means algorithm কি করে?",
-                "Reinforcement Learning-এ Agent কি?",
-                "Reward ও Penalty কিভাবে Robot শিখতে সাহায্য করে?",
-                "AlphaGo কোন ধরনের ML ব্যবহার করেছে?",
-                "তিন ধরনের ML-এর মধ্যে কোনটা সবচেয়ে কঠিন মনে হয় এবং কেন?"
-              ]
-            }
-          }
-        },
-        "Chapter 2": {
-          "title": "Computer Vision ও OpenCV",
-          "description": "Computer Vision দিয়ে রোবট ও কম্পিউটার ছবি দেখতে ও বুঝতে পারে।",
-          "topics": {
-            "Computer Vision পরিচিতি": {
-              "description": "Computer Vision হলো AI-এর একটি শাখা যেখানে কম্পিউটার ছবি ও ভিডিও থেকে তথ্য বের করতে পারে। একটি ছবি আসলে লক্ষ লক্ষ pixel-এর সমষ্টি — প্রতিটি pixel-এর RGB মান আছে। Computer Vision algorithm এই pixel-এর pattern বিশ্লেষণ করে বস্তু, মুখ, রঙ চেনে। OpenCV হলো সবচেয়ে জনপ্রিয় Computer Vision library — Python-এ সহজে ব্যবহার করা যায়।",
-              "examples": [
-                "Face Recognition: ফোনের face unlock — Computer Vision",
-                "Object Detection: গাড়িতে pedestrian ও traffic sign চেনা",
-                "Medical Imaging: X-ray, MRI থেকে রোগ শনাক্ত",
-                "Quality Control: কারখানায় ত্রুটিপূর্ণ পণ্য বাদ দেওয়া",
-                "Augmented Reality: ক্যামেরায় virtual object যোগ করা",
-                "Barcode/QR scanner — Computer Vision"
-              ],
-              "questions_answer": [
-                "Computer Vision কি?",
-                "Pixel মানে কি?",
-                "RGB মানে কি?",
-                "OpenCV কি?",
-                "Face Recognition কোন technology ব্যবহার করে?",
-                "Computer Vision কোন কোন শিল্পে ব্যবহার হচ্ছে?",
-                "তোমার ফোনের camera কি Computer Vision ব্যবহার করে?"
-              ]
-            },
-            "OpenCV দিয়ে রঙ ও মুখ শনাক্ত": {
-              "description": "OpenCV (Open Source Computer Vision Library) দিয়ে Python-এ ছবি পড়া, রঙ শনাক্ত করা, মুখ খোঁজা সহজেই করা যায়। HSV (Hue-Saturation-Value) color space ব্যবহার করে নির্দিষ্ট রঙ আলাদা করা যায়। Haar Cascade Classifier দিয়ে face detection করা যায়। এই skills দিয়ে color-tracking robot ও face-following camera তৈরি করা সম্ভব।",
-              "examples": [
-                "import cv2\nimg = cv2.imread('robot.jpg')\ncv2.imshow('Robot Image', img)\ncv2.waitKey(0)",
-                "Color detection: নীল রঙের বস্তু track করা",
-                "face_cascade = cv2.CascadeClassifier('haarcascade_frontalface.xml')\nfaces = face_cascade.detectMultiScale(gray, 1.3, 5)",
-                "Color-tracking robot: নীল বল দেখলে সেদিকে ঘোরে",
-                "cv2.rectangle() দিয়ে detected face-এর চারপাশে box আঁকা",
-                "Real-time webcam processing: 30 frames/second process করা"
-              ],
-              "questions_answer": [
-                "OpenCV দিয়ে কি কি করা যায়?",
-                "HSV color space কেন RGB-এর চেয়ে color detection-এ ভালো?",
-                "Haar Cascade কি?",
-                "cv2.imread() কি করে?",
-                "Face detection-এ gray image কেন ব্যবহার হয়?",
-                "Color-tracking robot কিভাবে কাজ করে?",
-                "Real-time processing মানে কি?"
-              ]
-            }
-          }
-        }
-      }
-    }
-  },
-  "class_10": {
-    "subjects": {
-      "ai and machine learning": {
-        "publish_date": "2025-01-01",
-        "Chapter 1": {
-          "title": "Neural Network ও Deep Learning",
-          "description": "Neural Network মানুষের মস্তিষ্কের অনুকরণে তৈরি। Deep Learning-এ অনেক Layer-এর Neural Network ব্যবহার হয়।",
-          "topics": {
-            "Neural Network Architecture": {
-              "description": "Neural Network হলো কৃত্রিম Neuron-এর সংযুক্ত জাল। প্রতিটি Neuron input নেয়, ওজন (weight) দিয়ে গুণ করে, bias যোগ করে, Activation Function দিয়ে output দেয়। Neural Network-এ তিনটি layer থাকে — Input Layer (data প্রবেশ করে), Hidden Layer (feature বের হয়), Output Layer (ফলাফল বের হয়)। Hidden Layer বেশি হলে Deep Neural Network বা Deep Learning।",
-              "examples": [
-                "Input: ছবির 784 pixel → 2 Hidden Layers → Output: 0-9 digit",
-                "Weight: প্রতিটি connection-এর গুরুত্ব — training-এ adjust হয়",
-                "Activation Function (ReLU): negative value শূন্য করে দেয়",
-                "Bias: neuron-এর threshold — কতটুকু activation দরকার",
-                "Forward propagation: data input থেকে output পর্যন্ত যায়",
-                "মানুষের মস্তিষ্কে 86 বিলিয়ন neuron — AI-এ হাজার থেকে লক্ষ"
-              ],
-              "questions_answer": [
-                "Neural Network-এর তিনটি Layer-এর নাম ও কাজ বলো।",
-                "Weight কি এবং কি কাজ করে?",
-                "Activation Function কেন দরকার?",
-                "Deep Learning কি?",
-                "Bias মানে কি?",
-                "Forward Propagation মানে কি?",
-                "মানুষের মস্তিষ্কের সাথে Neural Network-এর মিল ও পার্থক্য কি?"
-              ]
-            },
-            "Training — Backpropagation ও Gradient Descent": {
-              "description": "Training মানে Neural Network-কে সঠিক উত্তর দিতে শেখানো। প্রথমে random weight দিয়ে শুরু হয়। Prediction ভুল হলে Loss Function ভুলের পরিমাণ (error) মাপে। Backpropagation algorithm পেছন থেকে এগিয়ে প্রতিটি weight কতটুকু পরিবর্তন দরকার হিসাব করে। Gradient Descent সেই পরিবর্তন apply করে weight update করে। এই প্রক্রিয়া হাজারবার চলে — ধীরে ধীরে ভুল কমে।",
-              "examples": [
-                "Prediction: dog, Actual: cat → Error = 1 → Backprop → weight update",
-                "Loss Function (MSE): (predicted - actual)² এর গড়",
-                "Learning Rate: প্রতিবার কতটুকু update হবে — too high → miss, too low → slow",
-                "Epoch: পুরো training dataset একবার দেখা",
-                "1000 epoch পর: loss = 0.01 → model অনেক ভালো",
-                "Overfitting: training data-তে perfect কিন্তু নতুন data-তে খারাপ"
-              ],
-              "questions_answer": [
-                "Training process-এর ধাপগুলো বলো।",
-                "Loss Function কি পরিমাপ করে?",
-                "Backpropagation কি?",
-                "Gradient Descent কিভাবে weight update করে?",
-                "Learning Rate বেশি হলে কি হয়?",
-                "Epoch মানে কি?",
-                "Overfitting কি এবং কিভাবে prevent করা যায়?"
-              ]
-            }
-          }
-        },
-        "Chapter 2": {
-          "title": "Python দিয়ে ML Project",
-          "description": "scikit-learn ও pandas দিয়ে বাস্তব ML project তৈরি শিখবো।",
-          "topics": {
-            "Pandas ও Data Preprocessing": {
-              "description": "Pandas হলো Python-এর data analysis library। DataFrame ব্যবহার করে tabular data (Excel-এর মতো) সহজে handle করা যায়। ML project শুরু করার আগে data clean করতে হয় — missing value পূরণ, duplicate remove, normalization। এই কাজকে Data Preprocessing বলে। ভালো data ছাড়া ভালো model তৈরি সম্ভব নয়।",
-              "examples": [
-                "import pandas as pd\ndf = pd.read_csv('students.csv')\nprint(df.head())  # প্রথম 5 row দেখো",
-                "df.isnull().sum()  # missing value গোনো",
-                "df.fillna(df.mean())  # missing value গড় দিয়ে পূরণ করো",
-                "df.drop_duplicates()  # duplicate row বাদ দাও",
-                "df['age'].describe()  # statistics দেখো",
-                "df[df['score'] > 80]  # score>80 filter করো"
-              ],
-              "questions_answer": [
-                "Pandas কি?",
-                "DataFrame কি?",
-                "Data Preprocessing কেন দরকার?",
-                "Missing value কিভাবে handle করা যায়?",
-                "df.head() কি দেখায়?",
-                "Normalization মানে কি?",
-                "'Garbage in, garbage out' ML-এ কি বোঝায়?"
-              ]
-            },
-            "scikit-learn দিয়ে Classification": {
-              "description": "scikit-learn হলো Python-এর সবচেয়ে জনপ্রিয় Machine Learning library। এখানে Decision Tree, Random Forest, SVM, KNN-সহ অনেক ready-made algorithm আছে। ML workflow: data load → split (train/test) → model তৈরি → train → evaluate। Accuracy, Precision, Recall দিয়ে model মূল্যায়ন করা হয়।",
-              "examples": [
-                "from sklearn.tree import DecisionTreeClassifier\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.metrics import accuracy_score\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)\nmodel = DecisionTreeClassifier()\nmodel.fit(X_train, y_train)\npredictions = model.predict(X_test)\nprint(accuracy_score(y_test, predictions))",
-                "Iris flower dataset: 3 প্রজাতির ফুল classify করা",
-                "Train/Test split: 80% train, 20% test — সবচেয়ে প্রচলিত",
-                "accuracy_score: সঠিক prediction-এর শতকরা হার"
-              ],
-              "questions_answer": [
-                "scikit-learn কি?",
-                "train_test_split কেন করা হয়?",
-                "model.fit() কি করে?",
-                "model.predict() কি করে?",
-                "accuracy_score 0.95 মানে কি?",
-                "80/20 split মানে কি?",
-                "Decision Tree কিভাবে classification করে?"
-              ]
-            }
-          }
-        }
-      }
-    }
-  },
-  "class_11": {
-    "subjects": {
-      "advanced ai and robotics": {
-        "publish_date": "2025-01-01",
-        "Chapter 1": {
-          "title": "CNN ও Transfer Learning",
-          "description": "Convolutional Neural Network (CNN) ছবি চেনার জন্য সবচেয়ে কার্যকর। Transfer Learning পূর্বের trained model ব্যবহার করে।",
-          "topics": {
-            "CNN Architecture ও কাজ": {
-              "description": "CNN হলো ছবি processing-এর জন্য বিশেষভাবে ডিজাইন করা Neural Network। Convolutional Layer ছবির উপর filter/kernel চালিয়ে edge, corner, texture-এর মতো feature বের করে। Pooling Layer ছবির size কমায় কিন্তু গুরুত্বপূর্ণ feature রাখে। Fully Connected Layer শেষে সব feature দেখে final classification করে। CNN-এর কারণেই আজকের Face Recognition, Object Detection সম্ভব হয়েছে।",
-              "examples": [
-                "LeNet (1998) — handwritten digit recognition, first famous CNN",
-                "AlexNet (2012) — ImageNet competition জিতে AI revolution শুরু করে",
-                "VGG16 — 16 layer, খুব accurate image classifier",
-                "ResNet — 152 layer, Skip Connection দিয়ে training সহজ করে",
-                "Tesla: CNN দিয়ে রাস্তায় pedestrian, car, sign চেনে",
-                "Medical: CNN দিয়ে skin cancer ও brain tumor detect করে"
-              ],
-              "questions_answer": [
-                "CNN কোন ধরনের কাজে সবচেয়ে ভালো?",
-                "Convolutional Layer কি feature extract করে?",
-                "Pooling Layer কি কাজ করে?",
-                "AlexNet-এর গুরুত্ব কি?",
-                "ResNet-এর Skip Connection কি সমস্যা সমাধান করে?",
-                "Tesla-এর self-driving car-এ CNN কিভাবে ব্যবহার হয়?",
-                "Medical imaging-এ CNN-এর সুবিধা কি?"
-              ]
-            },
-            "Transfer Learning ও Fine-tuning": {
-              "description": "Transfer Learning হলো অন্য task-এ train করা model-কে নিজের নতুন task-এ ব্যবহার করা। ImageNet-এ 1 মিলিয়ন ছবিতে train হওয়া VGG, ResNet-কে নতুন ছবি classify করতে ব্যবহার করা যায়। Fine-tuning মানে pre-trained model-এর শেষের কয়েকটি layer পরিবর্তন করা নতুন কাজের জন্য। Transfer Learning-এ কম data ও কম সময়ে ভালো model তৈরি হয়।",
-              "examples": [
-                "VGG16 (ImageNet trained) → remove last layer → add new layer for cats/dogs → fine-tune",
-                "GPT (language trained) → fine-tune for medical Q&A",
-                "BERT → fine-tune for Bengali sentiment analysis",
-                "কম data (100 ছবি) দিয়ে Transfer Learning → ভালো accuracy",
-                "Scratch থেকে train করতে লক্ষ ছবি লাগত",
-                "Feature extraction: শুধু শেষের layer পরিবর্তন (faster), Fine-tuning: কয়েকটি layer পরিবর্তন (better)"
-              ],
-              "questions_answer": [
-                "Transfer Learning কি এবং কেন উপকারী?",
-                "Fine-tuning মানে কি?",
-                "কম data থাকলে Transfer Learning কেন ভালো?",
-                "Feature extraction ও Fine-tuning-এর পার্থক্য কি?",
-                "GPT-কে medical Q&A-তে কিভাবে use করা যায়?",
-                "Scratch থেকে train করার তুলনায় Transfer Learning কত দ্রুত?",
-                "তুমি Transfer Learning দিয়ে কি project বানাতে চাও?"
-              ]
-            }
-          }
-        },
-        "Chapter 2": {
-          "title": "NLP ও Transformer Architecture",
-          "description": "NLP দিয়ে কম্পিউটার মানুষের ভাষা বোঝে। Transformer হলো modern NLP-এর ভিত্তি।",
-          "topics": {
-            "NLP — ভাষা বোঝার AI": {
-              "description": "NLP (Natural Language Processing) হলো AI-এর এমন শাখা যেখানে কম্পিউটার মানুষের লেখা ও কথা বুঝতে, বিশ্লেষণ করতে এবং তৈরি করতে পারে। Tokenization → Embedding → Processing → Output — এটাই NLP pipeline। Sentiment Analysis (মনোভাব বিশ্লেষণ), Machine Translation (অনুবাদ), Text Summarization, Question Answering — এগুলো NLP-এর প্রধান application।",
-              "examples": [
-                "Google Translate: বাংলা → English অনুবাদ",
-                "Siri/Google Assistant: প্রশ্ন বোঝা ও উত্তর দেওয়া",
-                "Sentiment Analysis: 'দারুণ হয়েছে' = Positive, 'একদম খারাপ' = Negative",
-                "Spam detection: email text বিশ্লেষণ",
-                "Auto-correct: typing-এ ভুল শুধরে দেওয়া",
-                "ChatGPT: যেকোনো বিষয়ে কথোপকথন"
-              ],
-              "questions_answer": [
-                "NLP মানে কি?",
-                "Tokenization কি?",
-                "Sentiment Analysis কি?",
-                "Google Translate কোন technology ব্যবহার করে?",
-                "NLP pipeline-এর ধাপগুলো বলো।",
-                "Bangla NLP কেন কঠিন?",
-                "তুমি NLP দিয়ে কি বানাতে চাও?"
-              ]
-            },
-            "Transformer ও Attention Mechanism": {
-              "description": "Transformer 2017 সালে Google-এর 'Attention is All You Need' paper-এ উপস্থাপিত হয়। Self-Attention Mechanism দিয়ে শব্দের মধ্যে সম্পর্ক বোঝে — 'bank' শব্দটি 'river bank' ও 'money bank'-এ আলাদা অর্থ বহন করে, Transformer এটা বুঝতে পারে। GPT (Generative Pre-trained Transformer) ও BERT — দুটিই Transformer-ভিত্তিক। ChatGPT, Claude — সব modern AI Transformer ব্যবহার করে।",
-              "examples": [
-                "BERT: Google Search-এ query বোঝার জন্য",
-                "GPT-4: ChatGPT-এর পেছনের model",
-                "Claude: Anthropic-এর Transformer-based AI",
-                "Self-attention: 'I saw the man with a telescope' — কে telescope ধরেছে?",
-                "Positional Encoding: শব্দের ক্রম বোঝার জন্য",
-                "Multi-head Attention: একসাথে অনেকভাবে সম্পর্ক বিশ্লেষণ"
-              ],
-              "questions_answer": [
-                "Transformer কত সালে উপস্থাপিত হয়?",
-                "Self-Attention Mechanism কি করে?",
-                "GPT ও BERT-এর মধ্যে পার্থক্য কি?",
-                "'bank' শব্দের উদাহরণে Transformer কিভাবে সঠিক অর্থ বোঝে?",
-                "ChatGPT কোন architecture ব্যবহার করে?",
-                "Transformer-এর আগে NLP-তে কি ব্যবহার হত?",
-                "Claude AI কে তৈরি করেছে?"
-              ]
-            }
-          }
-        }
-      }
-    }
-  },
-  "class_12": {
-    "subjects": {
-      "advanced ai and robotics": {
-        "publish_date": "2025-01-01",
-        "Chapter 1": {
-          "title": "Advanced Robotics — ROS ও SLAM",
-          "description": "ROS হলো robotics software development-এর standard framework। SLAM দিয়ে robot নিজের মানচিত্র তৈরি করে।",
-          "topics": {
-            "ROS — Robot Operating System": {
-              "description": "ROS (Robot Operating System) হলো robotics software তৈরির একটি open-source framework। এটা আসলে একটি OS নয় — বরং robot-এর বিভিন্ন অংশের মধ্যে যোগাযোগের middleware। Node হলো ROS-এর একটি process যা একটি নির্দিষ্ট কাজ করে (camera, motor, planning)। Topic হলো data channel যেখানে Node publish ও subscribe করে। ROS2 হলো সর্বশেষ ও সবচেয়ে advanced সংস্করণ।",
-              "examples": [
-                "Camera Node → publishes /image topic → Processing Node subscribes",
-                "Lidar Node → /scan topic → SLAM Node → /map topic → Navigation Node",
-                "Boston Dynamics, NASA, Autonomous vehicles — সবাই ROS ব্যবহার করে",
-                "rosrun turtlebot teleop_key → keyboard দিয়ে robot চালানো",
-                "rviz — ROS visualization tool — robot-এর দেখা map দেখা যায়",
-                "ros2 topic list → সব active topic দেখা"
-              ],
-              "questions_answer": [
-                "ROS কি?",
-                "Node ও Topic-এর সম্পর্ক কি?",
-                "Publisher ও Subscriber মানে কি?",
-                "ROS কেন robotics development-এ জনপ্রিয়?",
-                "ROS2 ROS1-এর চেয়ে কিভাবে আলাদা?",
-                "একটি autonomous robot-এ কতগুলো Node থাকতে পারে?",
-                "rviz কি কাজ করে?"
-              ]
-            },
-            "SLAM ও Path Planning": {
-              "description": "SLAM (Simultaneous Localization and Mapping) হলো robot-এর একটি fundamental capability — robot একই সাথে অজানা পরিবেশের মানচিত্র তৈরি করে এবং সেই মানচিত্রে নিজের অবস্থান নির্ধারণ করে। A* ও Dijkstra হলো path planning-এর বিখ্যাত algorithm। A* হিউরিস্টিক ব্যবহার করে দ্রুত সবচেয়ে ছোট পথ খোঁজে।",
-              "examples": [
-                "Vacuum robot: ঘর scan করে map তৈরি করে, তারপর সম্পূর্ণ ঘর পরিষ্কার করে",
-                "Self-driving car: GPS + LiDAR + camera দিয়ে SLAM করে",
-                "A* algorithm: start থেকে goal পর্যন্ত সবচেয়ে কম cost-এর পথ",
-                "Dijkstra: সব পথের দূরত্ব হিসাব করে সবচেয়ে ছোটটা বেছে নেয়",
-                "Mars rover: অজানা Mars-এ SLAM দিয়ে নিজে navigate করে",
-                "Heuristic: goal-এর দিকে সরাসরি অনুমান করে time বাঁচায়"
-              ],
-              "questions_answer": [
-                "SLAM মানে কি?",
-                "SLAM-এ Localization ও Mapping কি?",
-                "A* ও Dijkstra algorithm-এর পার্থক্য কি?",
-                "Heuristic কি এবং কেন দরকার?",
-                "Vacuum robot SLAM কিভাবে ব্যবহার করে?",
-                "Self-driving car-এ SLAM কেন গুরুত্বপূর্ণ?",
-                "Mars rover-এ SLAM কেন দরকার?"
-              ]
-            }
-          }
-        },
-        "Chapter 2": {
-          "title": "AI Ethics ও Bangladesh-এর Tech ভবিষ্যৎ",
-          "description": "AI ব্যবহারে নৈতিকতা এবং বাংলাদেশে প্রযুক্তির সম্ভাবনা নিয়ে আলোচনা।",
-          "topics": {
-            "AI Ethics — দায়িত্বশীল AI": {
-              "description": "AI অত্যন্ত শক্তিশালী হলেও ভুলভাবে ব্যবহার হলে মারাত্মক ক্ষতি হতে পারে। AI Bias হলো যখন AI বিভিন্ন গোষ্ঠীর প্রতি অসম আচরণ করে — training data-তে bias থাকলে এটা হয়। Privacy Concern — AI আমাদের অনেক ব্যক্তিগত তথ্য সংগ্রহ করে। Transparency — AI কেন এই সিদ্ধান্ত নিল তা বোঝা দরকার। Responsible AI তৈরি করা ZAN TECH-এর মতো প্রতিষ্ঠানের দায়িত্ব।",
-              "examples": [
-                "AI Bias: Amazon-এর hiring AI মহিলাদের বিরুদ্ধে biased ছিল",
-                "Facial Recognition: কৃষ্ণাঙ্গ মানুষদের accuracy কম — bias",
-                "Deepfake: কারো মুখ দিয়ে মিথ্যা ভিডিও তৈরি — misuse",
-                "Data Privacy: Facebook Cambridge Analytica scandal",
-                "Explainable AI (XAI): AI কেন সিদ্ধান্ত নিল তা ব্যাখ্যা করে",
-                "AI weapon: autonomous killer drone — ethical dilemma"
-              ],
-              "questions_answer": [
-                "AI Bias কি এবং কেন হয়?",
-                "Responsible AI মানে কি?",
-                "Deepfake কিভাবে সমাজের ক্ষতি করতে পারে?",
-                "Data Privacy কেন AI-তে গুরুত্বপূর্ণ?",
-                "Explainable AI কেন দরকার?",
-                "AI weapon তৈরি করা উচিত কিনা — তোমার মতামত কি?",
-                "তুমি Responsible AI developer হতে চাইলে কি করবে?"
-              ]
-            },
-            "Bangladesh-এ Technology ও ZAN TECH-এর স্বপ্ন": {
-              "description": "বাংলাদেশে AI ও Robotics-এর অপার সম্ভাবনা আছে। ১৭ কোটি মানুষের দেশে কৃষি, স্বাস্থ্য, শিক্ষা, পোশাক শিল্প — সব খাতে AI বিপ্লব আনতে পারে। ZAN TECH-এর মতো প্রতিষ্ঠান বাংলাদেশের পরবর্তী প্রজন্মকে technology-ready করছে। তোমাদের মতো শিক্ষার্থীরাই আগামীর বাংলাদেশকে নেতৃত্ব দেবে।",
-              "examples": [
-                "কৃষি AI: ধানের রোগ সনাক্ত করে সঠিক কীটনাশক সুপারিশ",
-                "AI ডাক্তার: প্রত্যন্ত অঞ্চলে telemedicine ও diagnosis",
-                "Garments Robot: কাপড় কাটা ও সেলাইয়ে robotics automation",
-                "Education AI: প্রতিটি শিক্ষার্থীর জন্য personalized পাঠ্যক্রম",
-                "Flood prediction AI: বন্যার আগে সতর্কতা দেওয়া",
-                "ZAN TECH: বাংলাদেশের শিশুদের robotics ও AI শেখাচ্ছে"
-              ],
-              "questions_answer": [
-                "Bangladesh-এ AI কোন খাতে সবচেয়ে বেশি সম্ভাবনা আছে?",
-                "কৃষি খাতে AI কিভাবে কাজ করতে পারে?",
-                "AI doctor কিভাবে প্রত্যন্ত অঞ্চলে সাহায্য করবে?",
-                "Garments শিল্পে Robotics কেন গুরুত্বপূর্ণ?",
-                "ZAN TECH কেন শিশুদের robotics শেখাচ্ছে?",
-                "তুমি বড় হয়ে Bangladesh-এর কোন সমস্যা AI দিয়ে সমাধান করতে চাও?",
-                "তোমার কাছে ZAN TECH-এর future star হওয়ার জন্য কোন বিষয়টা সবচেয়ে গুরুত্বপূর্ণ মনে হয়?"
-              ]
-            }
-          }
+        "Bangladesh ও ZAN TECH-এর ভবিষ্যৎ": {
+          "description": "বাংলাদেশে AI ও Robotics-এর অপার সম্ভাবনা। কৃষি, স্বাস্থ্য, শিক্ষা, পোশাক শিল্প — সব খাতে AI বিপ্লব আসছে। ZAN TECH বাংলাদেশের পরবর্তী প্রজন্মকে প্রযুক্তিতে সক্ষম করছে।",
+          "examples": [
+            "কৃষি: ধানের রোগ সনাক্তে AI → সঠিক কীটনাশক, ফলন বৃদ্ধি",
+            "স্বাস্থ্য: AI ডাক্তার → প্রত্যন্ত অঞ্চলে telemedicine",
+            "Garments: Robot-assisted sewing → দ্রুত ও সঠিক উৎপাদন",
+            "বন্যা prediction AI: আগে সতর্কতা দেওয়া",
+            "Education AI: প্রতিটি শিক্ষার্থীর জন্য personalized পাঠ্যক্রম",
+            "ZAN TECH: রোবোটিক্স ও AI শিক্ষায় Bangladesh-এ অগ্রণী"
+          ],
+          "questions_answer": [
+            "Bangladesh-এ AI কোন খাতে সবচেয়ে বেশি সম্ভাবনা?",
+            "কৃষি খাতে AI কিভাবে সাহায্য করতে পারে?",
+            "Garments শিল্পে Robot কেন গুরুত্বপূর্ণ?",
+            "AI ডাক্তার প্রত্যন্ত অঞ্চলে কিভাবে কাজ করবে?",
+            "ZAN TECH কি উদ্দেশ্যে কাজ করছে?",
+            "তুমি বড় হয়ে বাংলাদেশের কোন সমস্যা AI বা Robot দিয়ে সমাধান করতে চাও?",
+            "তোমার কাছে ZAN TECH-এর future star হতে সবচেয়ে গুরুত্বপূর্ণ কি?"
+          ]
         }
       }
     }
